@@ -8,89 +8,99 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+    <div th:replace="partials :: navbar"></div>
 
+<!--    &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-top: 6em;">-->
+<!--        Launch demo modal-->
+<!--    </button>-->
 
-<!--<nav class="navbar">-->
-<!--    <div class="container-fluid">-->
-<!--        <a class="navbar-brand" href="#">-->
-<!--            <img class="navbar-brand" src="../static/img/White-Lettering-Logo.png" alt="nav-logo" th:src="@{/img/White-Lettering-Logo.png}" width="150" height="30"/>-->
-<!--        </a>-->
-<!--&lt;!&ndash;        <form class="d-flex">&ndash;&gt;-->
-<!--&lt;!&ndash;            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">&ndash;&gt;-->
-<!--&lt;!&ndash;            <button class="btn btn-outline-success" type="submit">Search</button>&ndash;&gt;-->
-<!--&lt;!&ndash;        </form>&ndash;&gt;-->
-<!--        <div class="collapse navbar-collapse" id="navbarNav">-->
-<!--            <ul class="navbar-nav" id="navlist">-->
-<!--                <li class="nav-item active">-->
-<!--                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">Features</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">Pricing</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link disabled" href="#">Disabled</a>-->
-<!--                </li>-->
-<!--            </ul>-->
+<!--    &lt;!&ndash; Modal &ndash;&gt;-->
+<!--    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--        <div class="modal-dialog" role="document">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                        <span aria-hidden="true">&times;</span>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+
+<!--                    <div class="login-box">-->
+<!--                        <h2>Login</h2>-->
+<!--                        <form>-->
+<!--                            <div class="user-box">-->
+<!--                                <input type="text" name="" required="">-->
+<!--                                <label>Username</label>-->
+<!--                            </div>-->
+<!--                            <div class="user-box">-->
+<!--                                <input type="password" name="" required="">-->
+<!--                                <label>Password</label>-->
+<!--                            </div>-->
+<!--                            <a href="#">-->
+<!--                                <span></span>-->
+<!--                                <span></span>-->
+<!--                                <span></span>-->
+<!--                                <span></span>-->
+<!--                                Submit-->
+<!--                            </a>-->
+<!--                        </form>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--                    <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                </div>-->
+<!--            </div>-->
 <!--        </div>-->
 <!--    </div>-->
-<!--</nav>-->
 
 
+<!--    &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">-->
+<!--        Launch demo modal-->
+<!--    </button>-->
 
-<nav class="navbar fixed-top navbar-expand-lg">
-    <div class="container-fluid">
-        <img class="navbar-brand" src="../static/img/White-Lettering-Logo.png" alt="nav-logo" th:src="@{/img/White-Lettering-Logo.png}" id="logoImg"/>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-            </ul>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Login</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body login-box">
+
+<!--                    <div class="login-box">-->
+                        <form>
+                            <div class="user-box">
+                                <input type="text" name="" required="">
+                                <label>Username</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="password" name="" required="">
+                                <label>Password</label>
+                            </div>
+                            <a href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Submit
+                            </a>
+                        </form>
+<!--                    </div>-->
+
+                </div>
+            </div>
         </div>
     </div>
-</nav>
 
-
-
-
-
-
-
-<!--<div class="login-box">-->
-<!--    <h2>Login</h2>-->
-<!--    <form>-->
-<!--        <div class="user-box">-->
-<!--            <input type="text" name="" required="">-->
-<!--            <label>Username</label>-->
-<!--        </div>-->
-<!--        <div class="user-box">-->
-<!--            <input type="password" name="" required="">-->
-<!--            <label>Password</label>-->
-<!--        </div>-->
-<!--        <a href="#">-->
-<!--            <span></span>-->
-<!--            <span></span>-->
-<!--            <span></span>-->
-<!--            <span></span>-->
-<!--            Submit-->
-<!--        </a>-->
-<!--    </form>-->
-<!--</div>-->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<!-- Your custom JS goes here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" rel="script"></script>
+    <!-- Your custom JS goes here -->
 
 </body>
 </html>

@@ -175,7 +175,12 @@ body {
     color: white;
 }
 
+.nav-item{
+    margin: 1em;
+}
+
 #logoImg{
-    width = 150;
-    height =30;
+    width: 150px;
+    height: 35px;
+    margin-left: 1.5em;
 }
