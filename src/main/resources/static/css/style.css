@@ -171,3 +171,11 @@ body {
     background: rgba(0,0,0,.5);
 }
 
+.nav-link {
+    color: white;
+}
+
+#logoImg{
+    width = 150;
+    height =30;
+}

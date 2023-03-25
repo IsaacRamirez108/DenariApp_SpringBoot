@@ -10,17 +10,62 @@
 <body>
 
 
-<nav class="navbar">
+<!--<nav class="navbar">-->
+<!--    <div class="container-fluid">-->
+<!--        <a class="navbar-brand" href="#">-->
+<!--            <img class="navbar-brand" src="../static/img/White-Lettering-Logo.png" alt="nav-logo" th:src="@{/img/White-Lettering-Logo.png}" width="150" height="30"/>-->
+<!--        </a>-->
+<!--&lt;!&ndash;        <form class="d-flex">&ndash;&gt;-->
+<!--&lt;!&ndash;            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">&ndash;&gt;-->
+<!--&lt;!&ndash;            <button class="btn btn-outline-success" type="submit">Search</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        </form>&ndash;&gt;-->
+<!--        <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--            <ul class="navbar-nav" id="navlist">-->
+<!--                <li class="nav-item active">-->
+<!--                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="#">Features</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="#">Pricing</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link disabled" href="#">Disabled</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
+
+
+<nav class="navbar fixed-top navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img class="navbar-brand" src="../static/img/White-Lettering-Logo.png" alt="nav-logo" th:src="@{/img/White-Lettering-Logo.png}" width="150" height="30"/>
-        </a>
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <img class="navbar-brand" src="../static/img/White-Lettering-Logo.png" alt="nav-logo" th:src="@{/img/White-Lettering-Logo.png}" id="logoImg"/>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
+
+
+
+
+
 
 
 <!--<div class="login-box">-->
