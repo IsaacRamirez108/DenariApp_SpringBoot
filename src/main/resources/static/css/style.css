@@ -9,34 +9,12 @@ body {
     color: white;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.5);
-}
-/*.modal-content {*/
-/*    position: relative;*/
-/*    background-color: white;*/
-/*    padding: 20px;*/
-/*    margin: auto;*/
-/*    width: 75%;*/
-/*    -webkit-animation-name: animatetop;*/
-/*    -webkit-animation-duration: 0.4s;*/
-/*    animation-name: animatetop;*/
-/*    animation-duration: 0.4s*/
-/*}*/
-
-.login-box {
+.modal{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
+    width: 50%;
+    height: 50%;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
@@ -45,18 +23,18 @@ body {
     border-radius: 10px;
 }
 
-.login-box h2 {
+.modal h2 {
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
     text-align: center;
 }
 
-.login-box .user-box {
+.modal .user-box {
     position: relative;
 }
 
-.login-box .user-box input {
+.modal .user-box input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -67,7 +45,7 @@ body {
     outline: none;
     background: transparent;
 }
-.login-box .user-box label {
+.modal .user-box label {
     position: absolute;
     top:0;
     left: 0;
@@ -78,15 +56,15 @@ body {
     transition: .5s;
 }
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
+.modal .user-box input:focus ~ label,
+.modal .user-box input:valid ~ label {
     top: -20px;
     left: 0;
     color: #03e9f4;
     font-size: 12px;
 }
 
-.login-box form a {
+.modal form a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -100,7 +78,7 @@ body {
     letter-spacing: 4px
 }
 
-.login-box a:hover {
+.modal a:hover {
     background: #03e9f4;
     color: #fff;
     border-radius: 5px;
@@ -110,12 +88,12 @@ body {
     0 0 100px #03e9f4;
 }
 
-.login-box a span {
+.modal a span {
     position: absolute;
     display: block;
 }
 
-.login-box a span:nth-child(1) {
+.modal a span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
@@ -133,7 +111,7 @@ body {
     }
 }
 
-.login-box a span:nth-child(2) {
+.modal a span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -152,7 +130,7 @@ body {
     }
 }
 
-.login-box a span:nth-child(3) {
+.modal a span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
@@ -171,7 +149,7 @@ body {
     }
 }
 
-.login-box a span:nth-child(4) {
+.modal a span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
