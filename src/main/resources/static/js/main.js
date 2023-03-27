@@ -1,9 +1,10 @@
 "use strict";
 (function(){
 
+    // JS to handle Login button Modal
     let modalBtn = document.getElementById("modal-btn")
     let modal = document.querySelector(".modal")
-    let closeBtn = document.querySelector(".close-btn")
+    let closeBtn = document.querySelector(".btn-close")
     modalBtn.onclick = function(){
         modal.style.display = "block"
     }
@@ -15,5 +16,8 @@
             modal.style.display = "none"
         }
     }
+
+
+
 
 })();
