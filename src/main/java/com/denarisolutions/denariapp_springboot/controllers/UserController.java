@@ -12,4 +12,9 @@ public class UserController {
         return "users/register";
     }
 
+    @GetMapping("/basic_info")
+    public String basicInfoForm() {
+        return "users/basic_info";
+    }
+
 }
