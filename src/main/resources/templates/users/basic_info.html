@@ -8,10 +8,10 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+<!--    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />-->
 
     <!-- MapBox API Default styling -->
-    <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet">
+<!--    <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet">-->
     <script id="search-js" defer="" src="https://api.mapbox.com/search-js/v1.0.0-beta.14/web.js"></script>
 </head>
 <body>
@@ -26,7 +26,7 @@
                 <input class="input mb12" autocomplete="address-line1">
             </div>
             <div class="user-box">
-                <label class="txt-s txt-bold color-gray mb3">Apartment, suite, unit, building, floor, etc.</label>
+                <label class="txt-s txt-bold color-gray mb3">Apartment, suite, unit, etc.</label>
                 <input class="input mb12" autocomplete="address-line2">
             </div>
             <div class="row">
@@ -49,44 +49,16 @@
                     </div>
                 </div>
             </div>
-            <button href="#">
+            <a><button>
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Submit
-            </button>
+            </button></a>
         </form>
     </div>
 
-<script>
-    // const script = document.getElementById('search-js');
-    // script.onload = () => {
-    //     const collection = mapboxsearch.autofill({
-    //         accessToken: MapBox_API_KEY
-    //     });
-    // };
-
-
-    document.getElementById("search-js").onload = () => {
-        mapboxsearch.config.accessToken = MapBox_API_KEY;
-
-        // Adding confirmation prompt to Users address
-        const form = document.querySelector('form');
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const result = await mapboxsearch.confirmAddress(form, {
-                theme: { variables: {border: '3px solid rgba(0,0,0,0.35)', borderRadius: '18px'} },
-                minimap: {
-                    defaultMapStyle: ['mapbox', 'outdoors-v11'],
-                    satelliteToggle: true
-                },
-                skipConfirmModal: (feature) => false // overrides default behavior, show dialog every time
-            });
-            console.log(result);
-        });
-    }
-</script>
 <div th:replace="~{partials :: scripts}"></div>
 </body>
 </html>
