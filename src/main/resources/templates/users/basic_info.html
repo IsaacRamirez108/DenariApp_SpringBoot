@@ -4,52 +4,49 @@
     <meta charset="UTF-8">
     <title>Basic Information</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script id="search-js" defer="" src="https://api.mapbox.com/search-js/v1.0.0-beta.14/web.js"></script>
     <!-- Your custom css styles go here -->
     <link rel="stylesheet" th:href="@{/css/style.css}">
-
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-<!--    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />-->
-
-    <!-- MapBox API Default styling -->
-<!--    <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet">-->
-    <script id="search-js" defer="" src="https://api.mapbox.com/search-js/v1.0.0-beta.14/web.js"></script>
 </head>
 <body>
 
 <div th:replace="partials :: navbar"></div>
 
+
+<mapbox-address-autofill access-token="">
     <div class="Registration-box">
         <form id="Address-form">
             <h3>Address</h3>
             <div class="user-box">
-                <label class="txt-s txt-bold color-gray mb3">Address</label>
-                <input class="input mb12" autocomplete="address-line1">
+                <input class="text" name="" autocomplete="address-line1">
+                <label>Address</label>
             </div>
             <div class="user-box">
-                <label class="txt-s txt-bold color-gray mb3">Apartment, suite, unit, etc.</label>
-                <input class="input mb12" autocomplete="address-line2">
+                <input class="text" name="" autocomplete="address-line2">
+                <label>Apartment, suite, unit, etc.</label>
             </div>
             <div class="row">
                 <div class="col 4">
                     <div class="user-box">
-                        <label class="txt-s txt-bold color-gray mb3">City</label>
-                        <input class="input mb12" autocomplete="address-level2">
+                        <input class="text" name="" autocomplete="address-level2">
+                        <label>City</label>
                     </div>
                 </div>
                 <div class="col 4">
                     <div class="user-box">
-                        <label class="txt-s txt-bold color-gray mb3">State / Region</label>
-                        <input class="input mb12" autocomplete="address-level1">
+                        <input class="text" name="" autocomplete="address-level1">
+                        <label>State / Region</label>
                     </div>
                 </div>
                 <div class="col 4">
                     <div class="user-box">
-                        <label class="txt-s txt-bold color-gray mb3">ZIP / Postcode</label>
-                        <input class="input" autocomplete="postal-code">
+                        <input class="text" name=""  autocomplete="postal-code">
+                        <label>ZIP / Postcode</label>
                     </div>
                 </div>
             </div>
-            <a><button>
+            <a><button id="addressConfirmation">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -58,6 +55,7 @@
             </button></a>
         </form>
     </div>
+</mapbox-address-autofill>
 
 <div th:replace="~{partials :: scripts}"></div>
 </body>
