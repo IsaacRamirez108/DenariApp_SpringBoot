@@ -10,17 +10,51 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
 
-
+    <!-- MapBox API Default styling -->
+    <!--    <link href="https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css" rel="stylesheet">-->
+    <script id="search-js" defer="" src="https://api.mapbox.com/search-js/v1.0.0-beta.14/web.js"></script>
 
 </head>
 <body>
 
 <div th:replace="partials :: navbar"></div>
 
-  <div class="container">
+    <div class="Registration-box">
+        <form>
+            <h3>Address</h3>
+            <div class="user-box">
+                <input type="text" class="input mb12" name="address" autocomplete="shipping address-line1">
+                <label>Address</label>
+            </div>
+            <div class="user-box">
+                <input type="text" class="input mb12" name="apartment" autocomplete="shipping address-line2">
+                <label>Apartment #</label>
+            </div>
+            <div class="flex">
+                <div class="user-box">
+                    <input type="text" class="input mb12" name="city" autocomplete="shipping address-level2">
+                    <label>City</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" class="input mb12 ml6" name="state" autocomplete="shipping address-level1">
+                    <label>State</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" class="input mb12 ml6" autocomplete="shipping postal-code">
+                    <label>Postcode</label>
+                </div>
+            </div>
+        </form>
+    </div>
 
-
-  </div>
+<script>
+    const script = document.getElementById('search-js');
+    script.onload = () => {
+        const collection = mapboxsearch.autofill({
+            accessToken: MapBox_API_KEY
+        });
+    };
+</script>
 
 <div th:replace="~{partials :: scripts}"></div>
 
