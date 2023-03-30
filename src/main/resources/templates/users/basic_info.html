@@ -13,49 +13,58 @@
 
 <div th:replace="partials :: navbar"></div>
 
+<div class="main-container container">
 
-<mapbox-address-autofill access-token="">
-    <div class="Registration-box">
-        <form id="Address-form">
-            <h3>Address</h3>
-            <div class="user-box">
-                <input class="text" name="" autocomplete="address-line1">
-                <label>Address</label>
-            </div>
-            <div class="user-box">
-                <input class="text" name="" autocomplete="address-line2">
-                <label>Apartment, suite, unit, etc.</label>
-            </div>
-            <div class="row">
-                <div class="col 4">
-                    <div class="user-box">
-                        <input class="text" name="" autocomplete="address-level2">
-                        <label>City</label>
-                    </div>
-                </div>
-                <div class="col 4">
-                    <div class="user-box">
-                        <input class="text" name="" autocomplete="address-level1">
-                        <label>State / Region</label>
-                    </div>
-                </div>
-                <div class="col 4">
-                    <div class="user-box">
-                        <input class="text" name=""  autocomplete="postal-code">
-                        <label>ZIP / Postcode</label>
-                    </div>
-                </div>
-            </div>
-            <a><button id="addressConfirmation">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
-            </button></a>
-        </form>
+    <div class="user-box">
+        <label for="start">Date of Birth</label>
+        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
     </div>
-</mapbox-address-autofill>
+
+    <mapbox-address-autofill access-token="">
+        <div class="Registration-box">
+            <form id="Address-form">
+                <h3>Address</h3>
+                <div class="user-box">
+                    <input class="text" name="" autocomplete="address-line1">
+                    <label>Address</label>
+                </div>
+                <div class="user-box">
+                    <input class="text" name="" autocomplete="address-line2">
+                    <label>Apartment, suite, unit, etc.</label>
+                </div>
+                <div class="row">
+                    <div class="col 4">
+                        <div class="user-box">
+                            <input class="text" name="" autocomplete="address-level2">
+                            <label>City</label>
+                        </div>
+                    </div>
+                    <div class="col 4">
+                        <div class="user-box">
+                            <input class="text" name="" autocomplete="address-level1">
+                            <label>State / Region</label>
+                        </div>
+                    </div>
+                    <div class="col 4">
+                        <div class="user-box">
+                            <input class="text" name=""  autocomplete="postal-code">
+                            <label>ZIP / Postcode</label>
+                        </div>
+                    </div>
+                </div>
+                <a><button id="addressConfirmation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Submit
+                </button></a>
+            </form>
+        </div>
+    </mapbox-address-autofill>
+</div>
+
+
 
 <div th:replace="~{partials :: scripts}"></div>
 </body>

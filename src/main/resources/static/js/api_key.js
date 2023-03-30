@@ -1,1 +1,0 @@
-const MapBox_API_KEY = "pk.eyJ1IjoiaXJhbWlyZXoxMDgiLCJhIjoiY2xiMm56NGE5MDNnbDNzcGh5dmoyeXVjNSJ9.K6sMjb-FN0pH8o1piPNklA";
