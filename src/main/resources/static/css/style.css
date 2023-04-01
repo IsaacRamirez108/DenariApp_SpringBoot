@@ -370,4 +370,15 @@ body {
 }
 .main-container{
     min-height: 100vh;
+    padding-top: 6em;
+}
+
+/* Allowing HTML5 Date picker to blend in with current background color */
+input[type="date"] {
+    background: transparent;
+    color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
 }

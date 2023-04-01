@@ -15,13 +15,13 @@
 
 <div class="main-container container">
 
-    <div class="user-box">
-        <label for="start">Date of Birth</label>
-        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
-    </div>
 
-    <mapbox-address-autofill access-token="">
-        <div class="Registration-box">
+    <div class="Registration-box">
+
+        <label for="start">Date of Birth</label>
+        <input type="date" id="start" name="date-of-birth">
+
+        <mapbox-address-autofill access-token="">
             <form id="Address-form">
                 <h3>Address</h3>
                 <div class="user-box">
@@ -60,8 +60,8 @@
                     Submit
                 </button></a>
             </form>
-        </div>
-    </mapbox-address-autofill>
+        </mapbox-address-autofill>
+    </div>
 </div>
 
 
