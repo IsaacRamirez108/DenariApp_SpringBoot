@@ -12,4 +12,17 @@ public class User {
     private String DOB;
     private String phoneNumber;
 
+    public User(long id, String firstName, String lastName, String email, String password, String SSN, String DOB, String phoneNumber) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.SSN = SSN;
+        this.DOB = DOB;
+        this.phoneNumber = phoneNumber;
+    }
+
+
+
 }
