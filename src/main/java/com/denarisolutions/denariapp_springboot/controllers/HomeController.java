@@ -11,4 +11,10 @@ public class HomeController {
         return "index";
     }
 
+    @GetMapping("/Pricing")
+    public String pricingPage(){return "pricing";}
+
+    @GetMapping("/AboutUs")
+    public String aboutUsPage(){return "aboutUs";}
+
 }
