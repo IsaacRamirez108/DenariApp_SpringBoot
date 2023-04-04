@@ -186,9 +186,6 @@ body {
     margin-left: 1.5em;
 }
 
-
-
-
 .close-btn {
     float: right;
     color: lightgray;
@@ -211,174 +208,318 @@ body {
 
 
 
-/* Registration Box Form*/
-.Registration-box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    height: 75%;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    border-radius: 10px;
+/*!* Registration Box Form*!*/
+/*.Registration-box{*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    width: 50%;*/
+/*    height: 75%;*/
+/*    padding: 40px;*/
+/*    transform: translate(-50%, -50%);*/
+/*    box-sizing: border-box;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.Registration-box h2 {*/
+/*    margin: 0 0 30px;*/
+/*    padding: 0;*/
+/*    color: #fff;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.Registration-box .user-box {*/
+/*    position: relative;*/
+/*}*/
+
+/*.Registration-box .user-box input {*/
+/*    width: 100%;*/
+/*    padding: 10px 0;*/
+/*    font-size: 16px;*/
+/*    color: #fff;*/
+/*    margin-bottom: 30px;*/
+/*    border: none;*/
+/*    border-bottom: 1px solid #fff;*/
+/*    outline: none;*/
+/*    background: transparent;*/
+/*}*/
+/*.Registration-box .user-box label {*/
+/*    position: absolute;*/
+/*    top:0;*/
+/*    left: 0;*/
+/*    padding: 10px 0;*/
+/*    font-size: 16px;*/
+/*    color: #fff;*/
+/*    pointer-events: none;*/
+/*    transition: .5s;*/
+/*}*/
+
+/*.Registration-box .user-box input:focus ~ label,*/
+/*.Registration-box .user-box input:valid ~ label {*/
+/*    top: -20px;*/
+/*    left: 0;*/
+/*    color: #03e9f4;*/
+/*    font-size: 12px;*/
+/*}*/
+
+/*.Registration-box form a {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    padding: 10px 20px;*/
+/*    color: #03e9f4;*/
+/*    font-size: 16px;*/
+/*    text-decoration: none;*/
+/*    text-transform: uppercase;*/
+/*    overflow: hidden;*/
+/*    transition: .5s;*/
+/*    margin-top: 40px;*/
+/*    letter-spacing: 4px*/
+/*}*/
+
+/*!* Submit Button Styling*!*/
+/*.Registration-box a:hover {*/
+/*    background: #03e9f4;*/
+/*    color: #fff;*/
+/*    border-radius: 5px;*/
+/*    box-shadow: 0 0 5px #03e9f4,*/
+/*    0 0 25px #03e9f4,*/
+/*    0 0 50px #03e9f4,*/
+/*    0 0 100px #03e9f4;*/
+/*}*/
+
+/*.Registration-box a span {*/
+/*    position: absolute;*/
+/*    display: block;*/
+/*}*/
+
+/*.Registration-box a span:nth-child(1) {*/
+/*    top: 0;*/
+/*    left: -100%;*/
+/*    width: 100%;*/
+/*    height: 2px;*/
+/*    background: linear-gradient(90deg, transparent, #03e9f4);*/
+/*    animation: btn-anim1 1s linear infinite;*/
+/*}*/
+
+/*@keyframes btn-anim1 {*/
+/*    0% {*/
+/*        left: -100%;*/
+/*    }*/
+/*    50%,100% {*/
+/*        left: 100%;*/
+/*    }*/
+/*}*/
+
+/*.Registration-box a span:nth-child(2) {*/
+/*    top: -100%;*/
+/*    right: 0;*/
+/*    width: 2px;*/
+/*    height: 100%;*/
+/*    background: linear-gradient(180deg, transparent, #03e9f4);*/
+/*    animation: btn-anim2 1s linear infinite;*/
+/*    animation-delay: .25s*/
+/*}*/
+
+/*@keyframes btn-anim2 {*/
+/*    0% {*/
+/*        top: -100%;*/
+/*    }*/
+/*    50%,100% {*/
+/*        top: 100%;*/
+/*    }*/
+/*}*/
+
+/*.Registration-box a span:nth-child(3) {*/
+/*    bottom: 0;*/
+/*    right: -100%;*/
+/*    width: 100%;*/
+/*    height: 2px;*/
+/*    background: linear-gradient(270deg, transparent, #03e9f4);*/
+/*    animation: btn-anim3 1s linear infinite;*/
+/*    animation-delay: .5s*/
+/*}*/
+
+/*@keyframes btn-anim3 {*/
+/*    0% {*/
+/*        right: -100%;*/
+/*    }*/
+/*    50%,100% {*/
+/*        right: 100%;*/
+/*    }*/
+/*}*/
+
+/*.Registration-box a span:nth-child(4) {*/
+/*    bottom: -100%;*/
+/*    left: 0;*/
+/*    width: 2px;*/
+/*    height: 100%;*/
+/*    background: linear-gradient(360deg, transparent, #03e9f4);*/
+/*    animation: btn-anim4 1s linear infinite;*/
+/*    animation-delay: .75s*/
+/*}*/
+
+/*@keyframes btn-anim4 {*/
+/*    0% {*/
+/*        bottom: -100%;*/
+/*    }*/
+/*    50%,100% {*/
+/*        bottom: 100%;*/
+/*    }*/
+/*}*/
+/*.main-container{*/
+/*    min-height: 100vh;*/
+/*    padding-top: 6em;*/
+/*}*/
+
+/*button{*/
+/*    background-color: transparent;*/
+/*    color: white;*/
+/*    !*background-repeat: no-repeat;*!*/
+/*    border: none;*/
+/*    !*cursor: pointer;*!*/
+/*    !*overflow: hidden;*!*/
+/*    outline: none;*/
+/*}*/
+
+/*!* Allowing HTML5 Date picker to blend in with current background color *!*/
+/*input[type="date"] {*/
+/*    background: transparent;*/
+/*    color: white;*/
+/*}*/
+
+/*input[type="date"]::-webkit-calendar-picker-indicator {*/
+/*    filter: invert(100%);*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+#notComplete, #submitGood, #dbError {
+    display:none;
+}
+#results {
+    text-align:center;
+    width:600px;
+    margin: 50px auto 0;
+    color:#222;
 }
 
-.Registration-box h2 {
-    margin: 0 0 30px;
-    padding: 0;
-    color: #fff;
+/*form styles*/
+#msform {
+    width: 600px;
+    margin-top: 7em;
     text-align: center;
-}
-
-.Registration-box .user-box {
     position: relative;
 }
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
 
-.Registration-box .user-box input {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
-}
-.Registration-box .user-box label {
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+
+    /*stacking fieldsets above each other*/
     position: absolute;
-    top:0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s;
 }
-
-.Registration-box .user-box input:focus ~ label,
-.Registration-box .user-box input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: #03e9f4;
-    font-size: 12px;
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
 }
-
-.Registration-box form a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #03e9f4;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 40px;
-    letter-spacing: 4px
-}
-
-.Registration-box a:hover {
-    background: #03e9f4;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4,
-    0 0 25px #03e9f4,
-    0 0 50px #03e9f4,
-    0 0 100px #03e9f4;
-}
-
-.Registration-box a span {
-    position: absolute;
-    display: block;
-}
-
-.Registration-box a span:nth-child(1) {
-    top: 0;
-    left: -100%;
+/*inputs*/
+#msform input, #msform textarea, #msform select {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
     width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
-    animation: btn-anim1 1s linear infinite;
+    box-sizing: border-box;
+    color: #222;
+    font-size: 13px;
 }
-
-@keyframes btn-anim1 {
-    0% {
-        left: -100%;
-    }
-    50%,100% {
-        left: 100%;
-    }
-}
-
-.Registration-box a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
-    animation: btn-anim2 1s linear infinite;
-    animation-delay: .25s
-}
-
-@keyframes btn-anim2 {
-    0% {
-        top: -100%;
-    }
-    50%,100% {
-        top: 100%;
-    }
-}
-
-.Registration-box a span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
-    animation: btn-anim3 1s linear infinite;
-    animation-delay: .5s
-}
-
-@keyframes btn-anim3 {
-    0% {
-        right: -100%;
-    }
-    50%,100% {
-        right: 100%;
-    }
-}
-
-.Registration-box a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
-    animation: btn-anim4 1s linear infinite;
-    animation-delay: .75s
-}
-
-@keyframes btn-anim4 {
-    0% {
-        bottom: -100%;
-    }
-    50%,100% {
-        bottom: 100%;
-    }
-}
-.main-container{
-    min-height: 100vh;
-    padding-top: 6em;
-}
-
-/* Allowing HTML5 Date picker to blend in with current background color */
-input[type="date"] {
-    background: transparent;
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    background: #DA4453;
+    font-weight: bold;
     color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
 }
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(100%);
+#msform .action-button:hover, #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #DA4453;
+}
+/*headings*/
+.fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #222;
+    margin-bottom: 10px;
+}
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+#progressbar li {
+    list-style-type: none;
+    color: #222;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 25%;
+    float: left;
+    position: relative;
+}
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: black;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+    background: #03e9f4;
+    color: white;
 }
