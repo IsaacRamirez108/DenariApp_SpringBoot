@@ -6,7 +6,7 @@ body {
     padding:0;
     font-family: sans-serif;
     background: linear-gradient(#141e30, #243b55);
-    color: white;
+    color: black;
 }
 
 .modal{
@@ -446,10 +446,10 @@ body {
     color: #222;
     font-size: 13px;
 }
-/*buttons*/
+/*buttons styling*/
 #msform .action-button {
     width: 100px;
-    background: #DA4453;
+    background: #03e9f4;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -459,8 +459,15 @@ body {
     margin: 10px 5px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #DA4453;
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
 }
+
 /*headings*/
 .fs-title {
     font-size: 15px;

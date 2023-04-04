@@ -11,6 +11,8 @@
 <body>
     <div th:replace="partials :: navbar"></div>
 
+    <div class="main-container container">
+
     <center>
         <form id="msform">
             <!-- progressbar -->
@@ -20,56 +22,67 @@
                 <li>Basic Information</li>
                 <li>Rental Information</li>
             </ul>
-            <!-- fieldsets -->
+
+            <!-- First From-->
             <fieldset>
                 <h2 class="fs-title">Registration</h2>
                 <h3 class="fs-subtitle">Step 1</h3>
                 <div class="row">
-                    <div class="col 7">
-                        <!--                    <div class="user-box">-->
+                    <div class="col 6">
                         <input type="text" name="first" required="" placeholder="First Name" />
-
-                        <!--                    </div>-->
                     </div>
-                    <div class="col 5">
-                        <!--                    <div class="user-box">-->
-                        <input type="text" name="last" required="" placeholder="Last Name" />
-                        <!--                        <label>Middle Name</label>-->
-                        <!--                    </div>-->
+                    <div class="col 6">
+                        <input type="text" name="last" required="" placeholder="Middle Name" />
                     </div>
                 </div>
+
+                <input type="text" name="email" placeholder="Last Name" />
                 <input type="text" name="email" placeholder="Email" />
                 <input type="password" name="pass" placeholder="Password" />
                 <input type="password" name="password" placeholder="Confirm Password" />
-                <input type="button" name="next" class="next action-button" value="Next" />
+<!--                <label for="cb1">I agree with terms and conditions</label>-->
+<!--                <input type="checkbox" id="cb1">-->
+                <!--Submit Button-->
+                <input type="button" name="next" class="next action-button" value="Next" id="addressConfirmation" />
             </fieldset>
+
+            <!--Second Form-->
             <fieldset>
-                <h2 class="fs-title">Choose keg details</h2>
+                <h2 class="fs-title">Address</h2>
                 <h3 class="fs-subtitle">Step 2</h3>
-                <select name="keg_type" placeholder="Pickup Date">
-                    <option value="" disabled selected style="display: none;">Choose Your Beer</option>
-                    <option value="Budweiser">Budweiser</option>
-                    <option value="Blue Moon">Blue Moon</option>
-                </select>
-                <select name="keg_size">
-                    <option value="" disabled selected style="display: none;">Choose Keg Size</option>
-                    <option value="1/2">1/2</option>
-                    <option value="1/6">1/6</option>
-                </select>
+                    <mapbox-address-autofill access-token="">
+                        <input class="text" name="" autocomplete="address-line1" placeholder="Address">
+                        <input class="text" name="" autocomplete="address-line2" placeholder="Apartment, suite, unit, etc.">
+                        <div class="row">
+                            <div class="col 4">
+                                <input class="text" name="" autocomplete="address-level2" placeholder="City">
+                            </div>
+                            <div class="col 4">
+                                <input class="text" name="" autocomplete="address-level1" placeholder="State / Region">
+                            </div>
+                            <div class="col 4">
+                                <input class="text" name=""  autocomplete="postal-code" placeholder="ZIP / Postcode">
+                            </div>
+                        </div>
+                    </mapbox-address-autofill>
                 <input type="button" name="previous" class="previous action-button" value="Previous" />
                 <input type="button" name="next" class="next action-button" value="Next" />
             </fieldset>
+
+            <!--Third Form-->
             <fieldset>
                 <h2 class="fs-title">Personal Details</h2>
                 <h3 class="fs-subtitle">Last Step</h3>
-                <input type="text" name="fname" placeholder="First Name" />
-                <input type="text" name="lname" placeholder="Last Name" />
+                <input type="text" name="first name" placeholder="First Name" />
+                <input type="text" name="last name" placeholder="Last Name" />
                 <input type="text" name="phone" placeholder="Phone" />
                 <input type="text" name="email" placeholder="E-mail" />
                 <!--<textarea name="address" placeholder="Address"></textarea>-->
                 <input type="button" name="previous" class="previous action-button" value="Previous" />
                 <input type="button" name="next" class="next action-button" value="Next" />
             </fieldset>
+
+            <!--Fourth From-->
             <fieldset>
                 <h2 class="fs-title">Choose keg details</h2>
                 <h3 class="fs-subtitle">Step 2</h3>
@@ -89,8 +102,6 @@
         </form>
     </center>
 
-
-    <div class="main-container container">
         <!--Modal for Login Button-->
         <div class="modal">
             <div class="login-box">

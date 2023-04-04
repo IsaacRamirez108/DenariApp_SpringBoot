@@ -34,21 +34,14 @@
         //                 defaultMapStyle: ['mapbox', 'outdoors-v11'],
         //                 satelliteToggle: true
         //             },
-        //             skipConfirmModal: (feature) => false // overrides default behavior, show dialog every time
+        //             // skipConfirmModal: (feature) => false // overrides default behavior, show dialog every time
         //         });
         //         console.log(result);
         //     });
         // }
 
 
-
-
-
-
-
-
-
-//jQuery time
+    // Registration Form
     var current_fs, next_fs, previous_fs; //fieldsets
     var left, opacity, scale; //fieldset properties which we will animate
     var animating; //flag to prevent quick multi-click glitches
@@ -126,8 +119,6 @@
     $(".submit").click(function(){
         return false;
     })
-
-
 
 
 })();
