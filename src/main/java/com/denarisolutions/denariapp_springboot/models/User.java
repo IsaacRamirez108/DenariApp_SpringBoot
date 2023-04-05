@@ -1,8 +1,12 @@
 package com.denarisolutions.denariapp_springboot.models;
 
-
+import jakarta.persistence.*;
+@Entity
+@Table(name="user")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String firstName;
     private String lastName;
@@ -21,6 +25,10 @@ public class User {
         this.SSN = SSN;
         this.DOB = DOB;
         this.phoneNumber = phoneNumber;
+    }
+
+    public User() {
+
     }
 
     public long getId() {
