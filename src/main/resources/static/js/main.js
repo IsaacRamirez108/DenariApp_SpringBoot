@@ -21,30 +21,31 @@
     // };
 
 
-        // document.getElementById("search-js").onload = () => {
-        //     mapboxsearch.config.accessToken = MapBox_API_KEY;
-        //
-        //     // Adding confirmation prompt to Users address
-        //     const form = document.querySelector('form');
-        //     form.addEventListener("submit", async (e) => {
-        //         e.preventDefault();
-        //         const result = await mapboxsearch.confirmAddress(form, {
-        //             theme: { variables: {border: '3px solid rgba(0,0,0,0.35)', borderRadius: '18px'} },
-        //             minimap: {
-        //                 defaultMapStyle: ['mapbox', 'outdoors-v11'],
-        //                 satelliteToggle: true
-        //             },
-        //             // skipConfirmModal: (feature) => false // overrides default behavior, show dialog every time
-        //         });
-        //         console.log(result);
-        //     });
-        // }
+    // Mapbox Address Confirmation Modal
+    document.getElementById("search-js").onload = () => {
+        mapboxsearch.config.accessToken = MapBox_API_KEY;
+
+        // Adding confirmation prompt to Users address
+        const form = document.querySelector('mapbox-address-autofill');
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const result = await mapboxsearch.confirmAddress(form, {
+                theme: { variables: {border: '3px solid rgba(0,0,0,0.35)', borderRadius: '18px'} },
+                minimap: {
+                    defaultMapStyle: ['mapbox', 'outdoors-v11'],
+                    satelliteToggle: true
+                },
+                // skipConfirmModal: (feature) => false // overrides default behavior, show dialog every time
+            });
+            console.log(result);
+        });
+    }
 
 
     // Registration Form
-    var current_fs, next_fs, previous_fs; //fieldsets
-    var left, opacity, scale; //fieldset properties which we will animate
-    var animating; //flag to prevent quick multi-click glitches
+    let current_fs, next_fs, previous_fs; //fieldsets
+    let left, opacity, scale; //fieldset properties which we will animate
+    let animating; //flag to prevent quick multi-click glitches
 
     $(".next").click(function(){
         if(animating) return false;
@@ -60,7 +61,7 @@
         next_fs.show();
         //hide the current fieldset with style
         current_fs.animate({opacity: 0}, {
-            step: function(now, mx) {
+            step: function(now, ) {
                 //as the opacity of current_fs reduces to 0 - stored in "now"
                 //1. scale current_fs down to 80%
                 scale = 1 - (1 - now) * 0.2;
@@ -95,7 +96,7 @@
         previous_fs.show();
         //hide the current fieldset with style
         current_fs.animate({opacity: 0}, {
-            step: function(now, mx) {
+            step: function(now) {
                 //as the opacity of current_fs reduces to 0 - stored in "now"
                 //1. scale previous_fs from 80% to 100%
                 scale = 0.8 + (1 - now) * 0.2;
@@ -115,10 +116,11 @@
             easing: 'easeInOutBack'
         });
     });
-
     $(".submit").click(function(){
         return false;
     })
+
+
 
     // Querying SSN users input to mask all numbers except the last 4 numbers & only allowing a max of 9 numbers total
     $('.ssn-value').on('keydown keyup mousedown mouseup', function() {
