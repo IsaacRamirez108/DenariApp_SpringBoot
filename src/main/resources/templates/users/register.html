@@ -41,6 +41,19 @@
                     <input type="text" name="email" placeholder="Email" />
                     <input type="password" name="pass" placeholder="Password" />
                     <input type="password" name="password" placeholder="Confirm Password" />
+                    <div class='num'>
+                        <input class='ssn-number' />
+                        <input class='ssn-value' placeholder="SSN: XXX-XX-XXXX"/>
+                    </div>
+                    <div class="row">
+                        <div class="col 6">
+                            <input type="date" name="dateofbirth">
+                        </div>
+                        <div class="col 6">
+                            <input type="tel" id="phone" name="phone" placeholder="(XXX)XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </div>
+                    </div>
+
                     <!--                <label for="cb1">I agree with terms and conditions</label>-->
                     <!--                <input type="checkbox" id="cb1">-->
                     <!--Next Button-->
@@ -52,12 +65,23 @@
                 <fieldset>
                     <h2 class="fs-title">Address</h2>
                     <h3 class="fs-subtitle">Step 2</h3>
-                    <input type="date" name="dateofbirth">
-                    <input type="tel" id="phone" name="phone" placeholder="(XXX)XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                    <div class='num'>
-                        <input class='ssn-number' />
-                        <input class='ssn-value' placeholder="SSN: XXX-XX-XXXX"/>
-                    </div>
+
+                    <mapbox-address-autofill access-token="">
+                        <input class="text" name="" autocomplete="address-line1" placeholder="Address">
+                        <input class="text" name="" autocomplete="address-level2" placeholder="City">
+                        <div class="row">
+                            <div class="col 4">
+                                <input class="text" name="" autocomplete="address-line2" placeholder="Apt, suite, unit, etc.">
+                            </div>
+                            <div class="col 4">
+                                <input class="text" name="" autocomplete="address-level1" placeholder="State / Region">
+                            </div>
+                            <div class="col 4">
+                                <input class="text" name=""  autocomplete="postal-code" placeholder="ZIP / Postcode">
+                            </div>
+                        </div>
+                    </mapbox-address-autofill>
+
                     <!--Previous & Next Button-->
                     <input type="button" name="previous" class="previous action-button" value="Previous" />
                     <input type="button" name="next" class="next action-button" value="Next" id="addressConfirmation" />
@@ -68,28 +92,7 @@
                 <fieldset>
                     <h2 class="fs-title">Personal Details</h2>
                     <h3 class="fs-subtitle">Last Step</h3>
-                    <mapbox-address-autofill access-token="">
-                        <div class="row">
-                            <div class="col 6">
-                                <input class="text" name="" autocomplete="address-line1" placeholder="Address">
-                            </div>
-                            <div class="col 6">
-                                <input class="text" name="" autocomplete="address-level2" placeholder="City">
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col 4">
-                                <input class="text" name="" autocomplete="address-line2" placeholder="Apartment, suite, unit, etc.">
-                            </div>
-                            <div class="col 4">
-                                <input class="text" name="" autocomplete="address-level1" placeholder="State / Region">
-                            </div>
-                            <div class="col 4">
-                                <input class="text" name=""  autocomplete="postal-code" placeholder="ZIP / Postcode">
-                            </div>
-                        </div>
-                    </mapbox-address-autofill>
 
                     <div class="row">
                         <div class="col 6">
@@ -106,8 +109,6 @@
                     <input type="button" name="previous" class="previous action-button" value="Previous" />
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
-
-
 
 
                 <!--Fourth From-->
@@ -132,48 +133,6 @@
             </form>
         </center>
 
-
-
-<!--        <div class="Registration-box">-->
-<!--            <h2>Register</h2>-->
-<!--            <form>-->
-<!--                <div class="row">-->
-<!--                    <div class="col 7">-->
-<!--                        <div class="user-box">-->
-<!--                            <input type="text" name="" required="">-->
-<!--                            <label>First Name</label>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col 5">-->
-<!--                        <div class="user-box">-->
-<!--                            <input type="text" name="" required="">-->
-<!--                            <label>Middle Name</label>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="user-box">-->
-<!--                    <input type="text" name="" required="">-->
-<!--                    <label>Last name</label>-->
-<!--                </div>-->
-<!--                <div class="user-box">-->
-<!--                    <input type="text" name="" required="">-->
-<!--                    <label>Email Address</label>-->
-<!--                </div>-->
-<!--                <div class="user-box">-->
-<!--                    <input type="password" name="" required="">-->
-<!--                    <label>Password</label>-->
-<!--                </div>-->
-
-<!--                <a href="/basic_info">-->
-<!--                    <span></span>-->
-<!--                    <span></span>-->
-<!--                    <span></span>-->
-<!--                    <span></span>-->
-<!--                    Submit-->
-<!--                </a>-->
-<!--            </form>-->
-<!--        </div>-->
-<!--    </div>-->
 </div>
 
     <div th:replace="~{partials :: scripts}"></div>
