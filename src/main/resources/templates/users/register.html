@@ -17,7 +17,7 @@
         <center>
             <form id="msform">
                 <!-- progressbar -->
-                <ul id="progressbar">
+                <ul id="progressbar" style="margin-right: 1em">
                     <li class="active">Who's It For?</li>
                     <li>Register</li>
                     <li>Basic Information</li>
@@ -43,9 +43,10 @@
                     <input type="password" name="password" placeholder="Confirm Password" />
                     <!--                <label for="cb1">I agree with terms and conditions</label>-->
                     <!--                <input type="checkbox" id="cb1">-->
-                    <!--Submit Button-->
+                    <!--Next Button-->
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
+
 
                 <!--Second Form-->
                 <fieldset>
@@ -57,12 +58,29 @@
                         <input class='ssn-number' />
                         <input class='ssn-value' placeholder="SSN: XXX-XX-XXXX"/>
                     </div>
+                    <!--Previous & Next Button-->
+                    <input type="button" name="previous" class="previous action-button" value="Previous" />
+                    <input type="button" name="next" class="next action-button" value="Next" id="addressConfirmation" />
+                </fieldset>
+
+
+                <!--Third Form-->
+                <fieldset>
+                    <h2 class="fs-title">Personal Details</h2>
+                    <h3 class="fs-subtitle">Last Step</h3>
                     <mapbox-address-autofill access-token="">
-                        <input class="text" name="" autocomplete="address-line1" placeholder="Address">
-                        <input class="text" name="" autocomplete="address-line2" placeholder="Apartment, suite, unit, etc.">
+                        <div class="row">
+                            <div class="col 6">
+                                <input class="text" name="" autocomplete="address-line1" placeholder="Address">
+                            </div>
+                            <div class="col 6">
+                                <input class="text" name="" autocomplete="address-level2" placeholder="City">
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col 4">
-                                <input class="text" name="" autocomplete="address-level2" placeholder="City">
+                                <input class="text" name="" autocomplete="address-line2" placeholder="Apartment, suite, unit, etc.">
                             </div>
                             <div class="col 4">
                                 <input class="text" name="" autocomplete="address-level1" placeholder="State / Region">
@@ -72,22 +90,25 @@
                             </div>
                         </div>
                     </mapbox-address-autofill>
-                    <input type="button" name="previous" class="previous action-button" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" id="addressConfirmation" />
-                </fieldset>
 
-                <!--Third Form-->
-                <fieldset>
-                    <h2 class="fs-title">Personal Details</h2>
-                    <h3 class="fs-subtitle">Last Step</h3>
-                    <input type="text" name="first name" placeholder="First Name" />
-                    <input type="text" name="last name" placeholder="Last Name" />
-                    <input type="text" name="phone" placeholder="Phone" />
-                    <input type="text" name="email" placeholder="E-mail" />
-                    <!--<textarea name="address" placeholder="Address"></textarea>-->
+                    <div class="row">
+                        <div class="col 6">
+<!--                            <label>Move in date</label>-->
+                            <input type="date" name="MoveIn">
+                        </div>
+                        <div class="col 6">
+<!--                            <label>Move out date</label>-->
+                            <input type="date" name="MoveOut">
+                        </div>
+                    </div>
+
+                    <!--Previous & Next Button-->
                     <input type="button" name="previous" class="previous action-button" value="Previous" />
                     <input type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
+
+
+
 
                 <!--Fourth From-->
                 <fieldset>
@@ -103,6 +124,8 @@
                         <option value="1/2">1/2</option>
                         <option value="1/6">1/6</option>
                     </select>
+
+                    <!--Previous & Next Button-->
                     <input type="button" name="previous" class="previous action-button" value="Previous" />
                     <input type="submit" name="submit" class="submit action-button" value="Submit" id="form-submit" />
                 </fieldset>

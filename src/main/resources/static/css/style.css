@@ -231,8 +231,8 @@ body {
     padding: 20px 30px;
 
     box-sizing: border-box;
-    width: 80%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0;
 
     /*stacking fieldsets above each other*/
     position: absolute;
@@ -351,3 +351,4 @@ body {
     color: transparent !important;
     background: transparent;
 }
+
