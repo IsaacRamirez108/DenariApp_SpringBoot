@@ -2,19 +2,27 @@ package com.denarisolutions.denariapp_springboot.models;
 
 import jakarta.persistence.*;
 @Entity
-@Table(name="user")
+@Table(name="users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column
     private String firstName;
+    @Column
     private String lastName;
+    @Column
     private String email;
+    @Column
     private String password;
+    @Column
     private String SSN;
+    @Column
     private String DOB;
+    @Column
     private String phoneNumber;
+
 
     public User(long id, String firstName, String lastName, String email, String password, String SSN, String DOB, String phoneNumber) {
         this.id = id;
