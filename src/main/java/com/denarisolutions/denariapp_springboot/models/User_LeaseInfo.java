@@ -12,7 +12,7 @@ public class User_LeaseInfo {
 
     // Still need to figure out how to go about uploading lease document
     //@Column
-    //private String ;
+    //private String imgUrl;
     @Column
     private String monthly_rent;
     @Column
