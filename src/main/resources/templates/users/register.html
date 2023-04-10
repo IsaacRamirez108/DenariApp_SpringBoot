@@ -30,17 +30,35 @@
                 <h3 class="fs-subtitle">Step 1</h3>
                 <div class="row">
                     <div class="col 6">
+                        <label class="form-label">First name</label>
                         <input type="text" name="first" required="" placeholder="First Name" />
                     </div>
                     <div class="col 6">
+                        <label class="form-label">Middle name</label>
                         <input type="text" name="last" required="" placeholder="Middle Name" />
                     </div>
                 </div>
 
+                <label class="form-label">Last name</label>
                 <input type="text" name="email" placeholder="Last Name" />
+                <label class="form-label">Email</label>
                 <input type="text" name="email" placeholder="Email" />
+                <label class="form-label">Password</label>
                 <input type="password" name="pass" placeholder="Password" />
+                <label class="form-label">Confirm Password</label>
                 <input type="password" name="password" placeholder="Confirm Password" />
+                <!--                <label for="cb1">I agree with terms and conditions</label>-->
+                <!--                <input type="checkbox" id="cb1">-->
+                <!--Next Button-->
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+
+
+            <!--Second Form-->
+            <fieldset>
+                <h2 class="fs-title">Address</h2>
+                <h3 class="fs-subtitle">Step 2</h3>
+
                 <div class='num'>
                     <input class='ssn-number' />
                     <input class='ssn-value' placeholder="SSN: XXX-XX-XXXX"/>
@@ -53,18 +71,6 @@
                         <input type="tel" id="phone" name="phone" placeholder="(XXX)XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                     </div>
                 </div>
-
-                <!--                <label for="cb1">I agree with terms and conditions</label>-->
-                <!--                <input type="checkbox" id="cb1">-->
-                <!--Next Button-->
-                <input type="button" name="next" class="next action-button" value="Next" />
-            </fieldset>
-
-
-            <!--Second Form-->
-            <fieldset>
-                <h2 class="fs-title">Address</h2>
-                <h3 class="fs-subtitle">Step 2</h3>
 
                 <mapbox-address-autofill access-token=>
                     <input class="text" name="" autocomplete="address-line1" placeholder="Address">
@@ -93,6 +99,12 @@
                 <h2 class="fs-title">Personal Details</h2>
                 <h3 class="fs-subtitle">Last Step</h3>
 
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Form of Payment</option>
+                    <option value="1">Cash</option>
+                    <option value="2">Paper Check</option>
+                    <option value="3">Online</option>
+                </select>
                 <input class="text" name="" placeholder="Monthly Rent">
                 <div class="row">
                     <div class="col 6">
