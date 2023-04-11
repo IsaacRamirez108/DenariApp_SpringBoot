@@ -9,6 +9,8 @@ body {
     color: black;
 }
 
+
+/*Start of Login Modal Styling*/
 .modal{
     position: absolute;
     top: 50%;
@@ -167,13 +169,6 @@ body {
         bottom: 100%;
     }
 }
-
-
-
-
-
-
-
 .close-btn {
     float: right;
     color: lightgray;
@@ -191,6 +186,14 @@ body {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
+/*End of Login Modal Styling*/
+
+
+
+
+
+
+
 
 
 /* Sign up Steps Form */
@@ -324,6 +327,8 @@ body {
     background: #03e9f4;
     color: white;
 }
+
+
 
 
 /*Social Security Number Input Format*/
@@ -470,8 +475,9 @@ body {
 /*}*/
 
 
-/*Header Styles*/
 
+
+/* Start of Navbar Styling*/
 #logoImg{
     width: 100%;
     height: 100%;
@@ -483,7 +489,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 100px 0;
+    padding: 2em 3rem 0;
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
     color: #fff;
@@ -520,9 +526,7 @@ header nav li {
     }
 }
 
-/* Start of Navbar Styling*/
 nav{
-    /*background: rgba(0,0,0,.5);*/
     list-style: none;
 }
 
@@ -531,7 +535,79 @@ nav{
     opacity: 0.75;
     color: white;
 }
+/* End of Navbar Styling*/
 
-.nav-item{
-    margin: 1em;
+
+
+
+
+
+/*Starting Main Landing Page Image Styling*/
+.hero {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: #fff;
 }
+
+.hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    /*z-index: -1;*/
+    background-color: #80a3db;
+}
+
+.hero h1 {
+    font: 72px "Amatic SC", sans-serif;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+.hero h3 {
+    font: 28px "Raleway", sans-serif;
+    font-weight: 300;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+}
+
+.hero landing{
+    padding: 20px 46px;
+}
+
+.hero-content-area {
+    opacity: 0;
+    margin-top: 100px;
+    animation: 1s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h3 {
+        font-size: 24px;
+    }
+
+    .hero a.btn {
+        padding: 15px 40px;
+    }
+}
+/*Ending Main Landing Page Image Styling*/
