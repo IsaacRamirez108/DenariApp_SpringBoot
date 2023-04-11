@@ -171,27 +171,8 @@ body {
 
 
 
-/* Start of Navbar Styling*/
-nav{
-    /*background: rgba(0,0,0,.5);*/
-    list-style: none;
-}
 
-.nav-link {
-    text-decoration: none;
-    opacity: 0.75;
-    color: white;
-}
 
-.nav-item{
-    margin: 1em;
-}
-
-#logoImg{
-    width: 100%;
-    height: 100%;
-    margin-left: 1.5em;
-}
 
 .close-btn {
     float: right;
@@ -537,4 +518,20 @@ header nav li {
     header h2 {
         margin-bottom: 15px;
     }
+}
+
+/* Start of Navbar Styling*/
+nav{
+    /*background: rgba(0,0,0,.5);*/
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    opacity: 0.75;
+    color: white;
+}
+
+.nav-item{
+    margin: 1em;
 }
