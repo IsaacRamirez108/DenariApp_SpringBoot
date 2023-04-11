@@ -742,3 +742,28 @@ section p {
     }
 }
 /*Ending of Landing Page Section Two*/
+
+
+/*Starting of Landing Page Section Three 'index.html'*/
+.landingPageS3 .grid li {
+    padding: 50px;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.landingPageS3 .grid li i {
+    color: #e07e7b;
+}
+
+.landingPageS3 .grid li h4 {
+    font-size: 30px;
+    margin: 25px 0;
+}
+
+@media (max-width: 800px) {
+    .landingPageS3 .grid li {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+}
+/*Ending of Landing Page Section Three*/
