@@ -768,8 +768,28 @@ section p {
 }
 /*Ending of Landing Page Section Three*/
 
+/*Starting Section Four 'index.html'*/
+.testimonials .quote {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 40px 0 25px;
+}
 
-/*Starting of Landing Page Section Four*/
+@media (max-width: 800px) {
+    .testimonials .quote {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .testimonials .author {
+        font-size: 14px;
+    }
+}
+/*Ending of Landing Page Section Four*/
+
+
+/*Starting of Landing Page Section Five*/
 .contact form {
     display: flex;
     align-items: center;
@@ -796,7 +816,7 @@ section p {
         margin: 0 0 20px 0;
     }
 }
-/*Ending of Landing Page Section Four*/
+/*Ending of Landing Page Section Five*/
 
 
 /*Starting of Footer Section*/
