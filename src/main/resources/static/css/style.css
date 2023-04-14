@@ -537,11 +537,14 @@ nav{
     opacity: 0.75;
     color: white;
 }
-/*.background-image{*/
-/*    background-repeat: no-repeat;*/
-/*    position: absolute;*/
-/*    z-index: 1;*/
-/*}*/
+.nav-link:hover{
+    color: #730C02;
+}
+.background-image{
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+}
 /* End of Navbar Styling*/
 
 
@@ -646,6 +649,9 @@ section p {
     text-align: center;
     min-height: 100vh;
     color: #fff;
+    width: 100%;
+    background-position: center top;
+    background-size:cover;
 }
 
 .hero .background-image {
@@ -859,3 +865,23 @@ footer p {
     }
 }
 /*Ending of Footer Section*/
+
+
+/*position: absolute;*/
+/*width: 100%;*/
+/*display: flex;*/
+/*justify-content: space-between;*/
+/*align-items: center;*/
+/*padding: 2em 3rem 0;*/
+/*animation: 1s fadein 0.5s forwards;*/
+/*opacity: 0;*/
+/*color: #fff;*/
+/*z-index: 2;*/
+
+
+
+
+
+
+
+

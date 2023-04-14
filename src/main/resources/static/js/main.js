@@ -133,5 +133,4 @@
         $(".ssn-number").val(result); //spits the value into the input
     });
 
-
 })();
