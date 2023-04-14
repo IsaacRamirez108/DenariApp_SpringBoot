@@ -10,7 +10,7 @@
 <!--Reusable Navbar-->
 <th:block th:fragment="navbar">
   <nav class="navbar fixed-top navbar-expand-lg">
-    <header>
+    <header class="nav-container">
       <a href="/Landing">
         <img class="navbar-brand" src="../static/img/allWhiteLogo.svg" alt="nav-logo" th:src="@{/img/allWhiteLogo.svg}" id="logoImg"/>
       </a>
@@ -26,6 +26,29 @@
     <!--      <span class="navbar-toggler-icon"></span>-->
     <!--    </button>-->
   </nav>
+
+
+
+<!--  <nav class="navbar fixed-top navbar-expand-lg">-->
+<!--    <header>-->
+<!--      <div class="nav-container">-->
+<!--        <div class="nav-row">-->
+<!--          <div class="nav-logo">-->
+<!--            <a href="/Landing">-->
+<!--              <img class="navbar-brand" src="../static/img/allWhiteLogo.svg" alt="nav-logo" th:src="@{/img/allWhiteLogo.svg}" id="logoImg"/>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--          <div class="nav-controls">-->
+<!--            <li><a class="nav-link" href="/Pricing">Pricing</a></li>-->
+<!--            <li><a class="nav-link" href="/AboutUs">About Us</a></li>-->
+<!--            <li><a class="nav-link" id="modal-btn">Login</a></li>-->
+<!--            <li><a class="nav-link" href="/register">Sign Up</a></li>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </header>-->
+<!--  </nav>-->
+
 </th:block>
 
 <!--All Script Tags-->

@@ -20,27 +20,25 @@
     //     });
     // };
 
-
-    // Mapbox Address Confirmation Modal
-    document.getElementById("search-js").onload = () => {
-        mapboxsearch.config.accessToken = MapBox_API_KEY;
-
-        // Adding confirmation prompt to Users address
-        const form = document.querySelector('mapbox-address-autofill');
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const result = await mapboxsearch.confirmAddress(form, {
-                theme: { variables: {border: '3px solid rgba(0,0,0,0.35)', borderRadius: '18px'} },
-                minimap: {
-                    defaultMapStyle: ['mapbox', 'outdoors-v11'],
-                    satelliteToggle: true
-                },
-                // skipConfirmModal: (feature) => false // overrides default behavior, show dialog every time
-            });
-            console.log(result);
-        });
-    }
-
+    // // Mapbox Address Confirmation Modal
+    // document.getElementById("search-js").onload = () => {
+    //     mapboxsearch.config.accessToken = MapBox_API_KEY;
+    //
+    //     // Adding confirmation prompt to Users address
+    //     const form = document.querySelector('mapbox-address-autofill');
+    //     form.addEventListener("submit", async (e) => {
+    //         e.preventDefault();
+    //         const result = await mapboxsearch.confirmAddress(form, {
+    //             theme: { variables: {border: '3px solid rgba(0,0,0,0.35)', borderRadius: '18px'} },
+    //             minimap: {
+    //                 defaultMapStyle: ['mapbox', 'outdoors-v11'],
+    //                 satelliteToggle: true
+    //             },
+    //             // skipConfirmModal: (feature) => false // overrides default behavior, show dialog every time
+    //         });
+    //         console.log(result);
+    //     });
+    // }
 
     // Registration Form
     let current_fs, next_fs, previous_fs; //fieldsets
@@ -120,8 +118,6 @@
         return false;
     })
 
-
-
     // Querying SSN users input to mask all numbers except the last 4 numbers & only allowing a max of 9 numbers total
     $('.ssn-value').on('keydown keyup mousedown mouseup', function() {
         let res = this.value, //grabs the value
@@ -131,6 +127,19 @@
             result = stars+res.substring(5); //this is the result
         $(this).attr('maxlength', max); //setting the max length
         $(".ssn-number").val(result); //spits the value into the input
+    });
+
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            let height = $('.first-container').height();
+            let scrollTop = $(window).scrollTop();
+
+            if (scrollTop >= height - 40) {
+                $('.nav-container').addClass('solid-nav');
+            } else {
+                $('.nav-container').removeClass('solid-nav');
+            }
+        });
     });
 
 })();
