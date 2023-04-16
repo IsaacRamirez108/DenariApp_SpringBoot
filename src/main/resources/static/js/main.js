@@ -142,4 +142,6 @@
         });
     });
 
+    // This forces the page to scroll to the top when refreshed
+    $(document).load().scrollTop(0);
 })();
