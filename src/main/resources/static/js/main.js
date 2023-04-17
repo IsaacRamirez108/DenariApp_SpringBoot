@@ -1,5 +1,8 @@
 "use strict";
 (function(){
+    // This forces the page to scroll to the top when refreshed
+    $(document).load().scrollTop(0);
+
     // const script = document.getElementById('search-js');
     // script.onload = () => {
     //      mapboxsearch.autofill({accessToken: MapBox_API_KEY});
@@ -129,6 +132,7 @@
         $(".ssn-number").val(result); //spits the value into the input
     });
 
+    // This Changes the Navbar from Transparent background to a solid color background when scrolling down
     $(document).ready(function() {
         $(window).scroll(function() {
             let height = $('.first-container').height();
@@ -141,7 +145,4 @@
             }
         });
     });
-
-    // This forces the page to scroll to the top when refreshed
-    $(document).load().scrollTop(0);
 })();

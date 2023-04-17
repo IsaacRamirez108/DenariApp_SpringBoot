@@ -351,7 +351,7 @@ html, body {
 /* Start of Navbar Styling*/
 #logoImg{
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 header {
@@ -420,13 +420,13 @@ nav{
     text-decoration: none;
 }
 .first-container {
-    background: url(../img/landingPageImg.jpg) no-repeat;
+    background: url(../img/sean-pollock-PhYq704ffdA-unsplash.jpg) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .nav-container {
     height: 100px;
