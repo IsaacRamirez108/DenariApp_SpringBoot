@@ -24,16 +24,23 @@ public class User_LeaseInfo {
     @Column
     private String form_payment;
 
-    public User_LeaseInfo(String monthly_rent, String moveIn_date, String moveOut_date, String rental_portal, String form_payment) {
+    public User_LeaseInfo() {
+
+    }
+    public User_LeaseInfo(long id, String monthly_rent, String moveIn_date, String moveOut_date, String rental_portal, String form_payment) {
+        this.id = id;
         this.monthly_rent = monthly_rent;
         this.moveIn_date = moveIn_date;
         this.moveOut_date = moveOut_date;
         this.rental_portal = rental_portal;
         this.form_payment = form_payment;
     }
-
-    public User_LeaseInfo() {
-
+    public User_LeaseInfo(String monthly_rent, String moveIn_date, String moveOut_date, String rental_portal, String form_payment) {
+        this.monthly_rent = monthly_rent;
+        this.moveIn_date = moveIn_date;
+        this.moveOut_date = moveOut_date;
+        this.rental_portal = rental_portal;
+        this.form_payment = form_payment;
     }
 
     public long getId() {
