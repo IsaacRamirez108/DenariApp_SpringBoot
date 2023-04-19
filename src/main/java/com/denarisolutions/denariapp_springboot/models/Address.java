@@ -20,6 +20,24 @@ public class Address {
     @Column
     private String postal_code;
 
+    public Address(){
+    }
+
+    public Address(long id, String street, String appt_number, String city, String state, String postal_code){
+        this.id = id;
+        this.street = street;
+        this.appt_number = appt_number;
+        this.city = city;
+        this.state = state;
+        this.postal_code = postal_code;
+    }
+    public Address(String street, String appt_number, String city, String state, String postal_code){
+        this.street = street;
+        this.appt_number = appt_number;
+        this.city = city;
+        this.state = state;
+        this.postal_code = postal_code;
+    }
 
     public long getId() {
         return id;
