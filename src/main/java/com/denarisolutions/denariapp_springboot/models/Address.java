@@ -20,6 +20,7 @@ public class Address {
     @Column
     private String postal_code;
 
+
     public long getId() {
         return id;
     }

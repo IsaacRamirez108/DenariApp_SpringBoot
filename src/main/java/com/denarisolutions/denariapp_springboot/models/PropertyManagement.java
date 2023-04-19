@@ -18,6 +18,23 @@ public class PropertyManagement {
     @Column
     private String email;
 
+    public PropertyManagement() {
+
+    }
+    public PropertyManagement(long id, String individual_company, String name, String contact, String email){
+        this.id = id;
+        this.individual_company = individual_company;
+        this.name = name;
+        this.contact = contact;
+        this.email = email;
+    }
+
+    public PropertyManagement(String individual_company, String name, String contact, String email) {
+        this.individual_company = individual_company;
+        this.name = name;
+        this.contact = contact;
+        this.email = email;
+    }
 
     public long getId() {
         return id;
