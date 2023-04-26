@@ -9,7 +9,8 @@
 
 <!--Reusable Navbar-->
 <th:block th:fragment="navbar">
-  <nav class="navbar fixed-top navbar-expand-lg">
+<!--  class="navbar fixed-top navbar-expand-lg"-->
+<!--  <nav>-->
     <header class="nav-container">
       <a href="/Landing">
         <img class="navbar-brand" src="../static/img/allWhiteLogo.svg" alt="nav-logo" th:src="@{/img/allWhiteLogo.svg}" id="logoImg"/>
@@ -21,13 +22,26 @@
         <li><a class="nav-link" href="/register">Sign Up</a></li>
       </nav>
     </header>
-<!--&lt;!&ndash;    This Button controls &ndash;&gt;-->
-<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--          <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-  </nav>
-
+<!--  </nav>-->
 </th:block>
+
+<!--&lt;!&ndash;Landing Page Navbar&ndash;&gt;-->
+<!--<th:block th:fragment="landingNavbar">-->
+<!--  &lt;!&ndash;  class="navbar fixed-top navbar-expand-lg"&ndash;&gt;-->
+<!--  <nav>-->
+<!--    <header class="nav-container">-->
+<!--      <a href="/Landing">-->
+<!--        <img class="navbar-brand" src="../static/img/allWhiteLogo.svg" alt="nav-logo" th:src="@{/img/allWhiteLogo.svg}" id="logoImg"/>-->
+<!--      </a>-->
+<!--      <nav>-->
+<!--        <li><a class="nav-link" href="/Pricing">Pricing</a></li>-->
+<!--        <li><a class="nav-link" href="/AboutUs">About Us</a></li>-->
+<!--        <li><a class="nav-link" href="/login">Login</a></li>-->
+<!--        <li><a class="nav-link" href="/register">Sign Up</a></li>-->
+<!--      </nav>-->
+<!--    </header>-->
+<!--  </nav>-->
+<!--</th:block>-->
 
 <!--All Script Tags-->
 <th:block th:fragment="scripts">

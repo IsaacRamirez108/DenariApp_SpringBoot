@@ -178,7 +178,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2em 3rem 0;
+    /*padding: 2em 3rem 0;*/
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
     color: #fff;
@@ -244,7 +244,7 @@ nav{
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: 100vh;
 }
 .nav-container {
     height: 100px;
@@ -256,13 +256,13 @@ nav{
 }
 .nav-container.solid-nav {
     background-color: black;
+    /*color: #730C02;*/
     transition: background-color 0.2s linear;
 }
 /* End of Navbar Styling*/
 
 
-ul,
-nav {
+ul{
     list-style: none;
 }
 
