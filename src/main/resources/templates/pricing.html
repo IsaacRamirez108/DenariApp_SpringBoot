@@ -10,47 +10,48 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 
 </head>
-<body id="Pricing">
 
-<!--<div th:replace="partials :: navbar"></div>-->
+<body>
+<div th:replace="partials :: navbar"></div>
 
-<div class="pricingTable">
-    <h2 class="pricingTable-title">Find a plan that's right for you.</h2>
-    <h3 class="pricingTable-subtitle">Every plan comes with a 30-day   free trial.</h3>
-
-    <ul class="pricingTable-firstTable">
-        <li class="pricingTable-firstTable_table">
-            <h1 class="pricingTable-firstTable_table__header">Bronze Packege</h1>
-            <p class="pricingTable-firstTable_table__pricing"><span>$</span><span>10</span><span>Month</span></p>
-            <ul class="pricingTable-firstTable_table__options">
-                <li>Unlimited Listing</li>
-                <li>Edit Your Listing</li>
-                <li>Approve Reviews</li>
-            </ul>
-            <button class="pricingTable-firstTable_table__getstart">Get Started Now</button>
-        </li><li class="pricingTable-firstTable_table">
-        <h1 class="pricingTable-firstTable_table__header">Gold Packege</h1>
-        <p class="pricingTable-firstTable_table__pricing"><span>$</span><span>19</span><span>Month</span></p>
-        <ul class="pricingTable-firstTable_table__options">
-            <li>Unlimited Listing</li>
-            <li>Edit Your Listing</li>
-            <li>Approve Reviews</li>
-            <li>Take Booking Online</li>
-            <li>24/7 Support Service</li>
+<div class="main-container">
+    <div class="columns pricing">
+        <ul class="price">
+            <li class="header">Basic</li>
+            <li class="grey">$ 5 / month</li>
+            <li>10GB Storage</li>
+            <li>10 Emails</li>
+            <li>10 Domains</li>
+            <li>1GB Bandwidth</li>
+            <li class="grey"><a href="#" class="button pricingTable-firstTable_table__getstart">Sign Up</a></li>
         </ul>
-        <button class="pricingTable-firstTable_table__getstart">Get Started Now</button>
-    </li><li class="pricingTable-firstTable_table">
-        <h1 class="pricingTable-firstTable_table__header">Platinum Packege</h1>
-        <p class="pricingTable-firstTable_table__pricing"><span>$</span><span>49</span><span>Month</span></p>
-        <ul class="pricingTable-firstTable_table__options">
-            <li>Unlimited Listing</li>
-            <li>Edit Your Listing</li>
-            <li>Approve Reviews</li>
+    </div>
+
+    <div class="columns pricing">
+        <ul class="price">
+            <li class="header">Basic</li>
+            <li class="grey">$ 2 / month</li>
+            <li>10GB Storage</li>
+            <li>10 Emails</li>
+            <li>10 Domains</li>
+            <li>1GB Bandwidth</li>
+            <li class="grey"><a href="#" class="button pricingTable-firstTable_table__getstart">Sign Up</a></li>
         </ul>
-        <button class="pricingTable-firstTable_table__getstart">Get Started Now</button>
-    </li>
-    </ul>
+    </div>
+
+    <div class="columns pricing">
+        <ul class="price">
+            <li class="header">Basic</li>
+            <li class="grey">$ 25 / One Time</li>
+            <li>10GB Storage</li>
+            <li>10 Emails</li>
+            <li>10 Domains</li>
+            <li>1GB Bandwidth</li>
+            <li class="grey"><a href="#" class="button pricingTable-firstTable_table__getstart">Sign Up</a></li>
+        </ul>
+    </div>
 </div>
+
 
 
 <div th:replace="~{partials :: scripts}"></div>

@@ -10,38 +10,50 @@
 <!--Reusable Navbar-->
 <th:block th:fragment="navbar">
 <!--  class="navbar fixed-top navbar-expand-lg"-->
-<!--  <nav>-->
-    <header class="nav-container">
-      <a href="/Landing">
-        <img class="navbar-brand" src="../static/img/allWhiteLogo.svg" alt="nav-logo" th:src="@{/img/allWhiteLogo.svg}" id="logoImg"/>
-      </a>
-      <nav>
-        <li><a class="nav-link" href="/Pricing">Pricing</a></li>
-        <li><a class="nav-link" href="/AboutUs">About Us</a></li>
-        <li><a class="nav-link" href="/login">Login</a></li>
-        <li><a class="nav-link" href="/register">Sign Up</a></li>
-      </nav>
-    </header>
-<!--  </nav>-->
-</th:block>
 
-<!--&lt;!&ndash;Landing Page Navbar&ndash;&gt;-->
-<!--<th:block th:fragment="landingNavbar">-->
-<!--  &lt;!&ndash;  class="navbar fixed-top navbar-expand-lg"&ndash;&gt;-->
-<!--  <nav>-->
-<!--    <header class="nav-container">-->
-<!--      <a href="/Landing">-->
-<!--        <img class="navbar-brand" src="../static/img/allWhiteLogo.svg" alt="nav-logo" th:src="@{/img/allWhiteLogo.svg}" id="logoImg"/>-->
-<!--      </a>-->
-<!--      <nav>-->
-<!--        <li><a class="nav-link" href="/Pricing">Pricing</a></li>-->
-<!--        <li><a class="nav-link" href="/AboutUs">About Us</a></li>-->
-<!--        <li><a class="nav-link" href="/login">Login</a></li>-->
-<!--        <li><a class="nav-link" href="/register">Sign Up</a></li>-->
-<!--      </nav>-->
-<!--    </header>-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/Landing">
+        <img src="../static/img/allWhiteLogoMain.png" alt="nav-logo" th:src="@{/img/allWhiteLogoMain.png}" width="150" height="28"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" ><a class="nav-link active" href="/Pricing">Pricing</a></li>
+          <li class="nav-item" ><a class="nav-link active" href="/AboutUs">About Us</a></li>
+          <li class="nav-item" ><a class="nav-link active" href="/login">Login</a></li>
+          <li class="nav-item" ><a class="nav-link active" href="/register">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!--  <nav class="nav">-->
+<!--    <div class="container">-->
+<!--      <div class="logo">-->
+<!--        <a href="/Landing">-->
+<!--          <img class="navbar-brand" src="../static/img/allWhiteLogo.svg" alt="nav-logo" th:src="@{/img/allWhiteLogo.svg}" id="logoImg"/>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--      <div id="mainListDiv" class="main_list">-->
+<!--        <ul class="navlinks">-->
+<!--          <li><a class="nav-link" href="/Pricing">Pricing</a></li>-->
+<!--          <li><a class="nav-link" href="/AboutUs">About Us</a></li>-->
+<!--          <li><a class="nav-link" href="/login">Login</a></li>-->
+<!--          <li><a class="nav-link" href="/register">Sign Up</a></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--      <span class="navTrigger">-->
+<!--                <i></i>-->
+<!--                <i></i>-->
+<!--                <i></i>-->
+<!--            </span>-->
+<!--    </div>-->
 <!--  </nav>-->
-<!--</th:block>-->
+
+</th:block>
 
 <!--All Script Tags-->
 <th:block th:fragment="scripts">
