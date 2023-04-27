@@ -9,8 +9,6 @@
 
 <!--Reusable Navbar-->
 <th:block th:fragment="navbar">
-<!--  class="navbar fixed-top navbar-expand-lg"-->
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="/Landing">
@@ -29,30 +27,24 @@
       </div>
     </div>
   </nav>
+</th:block>
 
-<!--  <nav class="nav">-->
-<!--    <div class="container">-->
-<!--      <div class="logo">-->
-<!--        <a href="/Landing">-->
-<!--          <img class="navbar-brand" src="../static/img/allWhiteLogo.svg" alt="nav-logo" th:src="@{/img/allWhiteLogo.svg}" id="logoImg"/>-->
-<!--        </a>-->
-<!--      </div>-->
-<!--      <div id="mainListDiv" class="main_list">-->
-<!--        <ul class="navlinks">-->
-<!--          <li><a class="nav-link" href="/Pricing">Pricing</a></li>-->
-<!--          <li><a class="nav-link" href="/AboutUs">About Us</a></li>-->
-<!--          <li><a class="nav-link" href="/login">Login</a></li>-->
-<!--          <li><a class="nav-link" href="/register">Sign Up</a></li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--      <span class="navTrigger">-->
-<!--                <i></i>-->
-<!--                <i></i>-->
-<!--                <i></i>-->
-<!--            </span>-->
-<!--    </div>-->
-<!--  </nav>-->
-
+<!--Landing Page Navbar-->
+<th:block th:fragment="landingNavbar">
+  <!--  class="navbar fixed-top navbar-expand-lg"-->
+  <nav>
+    <header class="nav-container">
+      <a href="/Landing">
+        <img class="navbar-brand" src="../static/img/allWhiteLogo.svg" alt="nav-logo" th:src="@{/img/allWhiteLogo.svg}" id="logoImg"/>
+      </a>
+      <nav>
+        <li><a class="nav-link" href="/Pricing">Pricing</a></li>
+        <li><a class="nav-link" href="/AboutUs">About Us</a></li>
+        <li><a class="nav-link" href="/login">Login</a></li>
+        <li><a class="nav-link" href="/register">Sign Up</a></li>
+      </nav>
+    </header>
+  </nav>
 </th:block>
 
 <!--All Script Tags-->

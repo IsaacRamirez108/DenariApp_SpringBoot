@@ -26,7 +26,6 @@ ul{
     /*background: linear-gradient(#04BFBF, #0396A6, #03738C);*/
 }
 
-
 /* Sign up Steps Form */
 #notComplete, #submitGood, #dbError {
     display:none;
@@ -156,7 +155,6 @@ ul{
     color: white;
 }
 
-
 /*Social Security Number Input Format*/
 .num{
     position:relative;
@@ -173,45 +171,33 @@ ul{
 }
 
 /* Start of Navbar Styling*/
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
 .navbar {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     animation: 1s fadein 0.5s forwards;
-    /*opacity: 0;*/
+    opacity: 0;
     color: white;
     z-index: 2;
 }
 .nav-link {
     display: inline-block;
-    list-style: none;
-    text-decoration: none;
     color: white;
-    transition: opacity 0.125s linear;
-    font-size: x-large;
-    font-family: 'Raleway';
-}
-.nav-link:hover {
-    opacity: 0.5;
-    cursor: pointer;
-    transition: opacity 0.125s linear;
-    color: white;
-}
-.nav-link:visited {
-    color: inherit;
-    text-decoration: none;
+    /*transition: opacity 0.125s linear;*/
+    font-size: large;
+    margin-right: 1.5em;
 }
 
-.nav-container.solid-nav {
-    background-color: black;
-    /*color: #730C02;*/
-    transition: background-color 0.2s linear;
-}
-
-#logoImg{
-    width: 100%;
-    height: auto;
-}
+/*!* This is for if we do a transparent navbar*!*/
+/*.navbar.solid-nav {*/
+/*    background-color: black;*/
+/*    transition: background-color 0.2s linear;*/
+/*}*/
 
 .first-container {
     background: url(../img/landingPageImg.jpg) no-repeat;
@@ -223,7 +209,6 @@ ul{
     height: 100vh;
 }
 /* End of Navbar Styling*/
-
 
 a {
     text-decoration: none;
@@ -414,7 +399,6 @@ section p {
 }
 /*Ending of Landing Page Section Two*/
 
-
 /*Starting of Landing Page Section Three 'index.html'*/
 .landingPageS3 .grid li {
     padding: 50px;
@@ -458,7 +442,6 @@ section p {
     }
 }
 /*Ending of Landing Page Section Four*/
-
 
 /*Starting of Landing Page Section Five*/
 .contact form {
