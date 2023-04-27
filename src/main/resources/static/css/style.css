@@ -17,7 +17,7 @@ ul{
     list-style: none;
 }
 
-.main-container{
+.container{
     margin-top: 5em;
 }
 
@@ -472,7 +472,6 @@ section p {
 }
 /*Ending of Landing Page Section Five*/
 
-
 /*Starting of Footer Section*/
 footer {
     display: flex;
@@ -513,7 +512,6 @@ footer p {
     }
 }
 /*Ending of Footer Section*/
-
 
 /*Start of Pricing Page Styling*/
 /* Create three columns of equal width */
