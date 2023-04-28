@@ -603,3 +603,12 @@ footer p {
     color: #717787;
 }
 /*End of Pricing Page Styling*/
+
+.card{
+    width: 50%;
+    height: auto;
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+}
