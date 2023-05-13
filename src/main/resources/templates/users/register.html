@@ -11,6 +11,7 @@
 </head>
 <body id="Registration-page">
 <div th:replace="partials :: navbar"></div>
+
 <div class="main-container container">
 
     <center>
@@ -30,50 +31,22 @@
                 <div class="row">
                     <div class="col 6">
 <!--                        <label class="form-label">First name</label>-->
-<!--                        <input type="text" name="first" required="" placeholder="First Name" />-->
-                        <label for="first" style="padding-top:13px">
-                            &nbsp;First Name
-                        </label>
-                        <input id="first" class="form-content" type="email" name="email" autocomplete="on" required />
-                        <div class="form-border"></div>
+                        <input type="text" name="first" required="" placeholder="First Name" />
                     </div>
                     <div class="col 6">
 <!--                        <label class="form-label">Middle name</label>-->
-<!--                        <input type="text" name="last" required="" placeholder="Middle Name" />-->
-                        <label for="middle" style="padding-top:13px">
-                            &nbsp;Middle Name
-                        </label>
-                        <input id="middle" class="form-content" type="email" name="email" autocomplete="on" required />
-                        <div class="form-border"></div>
+                        <input type="text" name="last" required="" placeholder="Middle Name" />
                     </div>
                 </div>
 
 <!--                <label class="form-label">Last name</label>-->
-<!--                <input type="text" name="email" placeholder="Last Name" />-->
-                <label for="last" style="padding-top:13px">
-                    &nbsp;Last Name
-                </label>
-                <input id="last" class="form-content" type="email" name="email" autocomplete="on" required />
-                <div class="form-border"></div>
-
+                <input type="text" name="email" placeholder="Last Name" />
 <!--                <label class="form-label">Email</label>-->
-<!--                <input type="text" name="email" placeholder="Email" />-->
-                <label for="email" style="padding-top:13px">
-                    &nbsp;Eamil
-                </label>
-                <input id="email" class="form-content" type="email" name="email" autocomplete="on" required />
-                <div class="form-border"></div>
-
+                <input type="text" name="email" placeholder="Email" />
 <!--                <label class="form-label">Password</label>-->
-<!--                <input type="password" name="pass" placeholder="Password" />-->
-                <label for="password" style="padding-top:13px">
-                    &nbsp;Password
-                </label>
-                <input id="password" class="form-content" type="email" name="email" autocomplete="on" required />
-                <div class="form-border"></div>
-
+                <input type="password" name="pass" placeholder="Password" />
 <!--                <label class="form-label">Confirm Password</label>-->
-<!--                <input type="password" name="password" placeholder="Confirm Password" />-->
+                <input type="password" name="password" placeholder="Confirm Password" />
 
                 <!--                <label for="cb1">I agree with terms and conditions</label>-->
                 <!--                <input type="checkbox" id="cb1">-->
@@ -100,7 +73,7 @@
                     </div>
                 </div>
 
-                <mapbox-address-autofill access-token=>
+                <mapbox-address-autofill access-token="pk.eyJ1IjoiaXJhbWlyZXoxMDgiLCJhIjoiY2xiMm56NGE5MDNnbDNzcGh5dmoyeXVjNSJ9.K6sMjb-FN0pH8o1piPNklA">
                     <input class="text" name="" autocomplete="address-line1" placeholder="Address">
                     <input class="text" name="" autocomplete="address-level2" placeholder="City">
                     <div class="row">
@@ -163,60 +136,6 @@
         </form>
     </center>
 
-
-
-
-
-    <!--        <div class="container">-->
-    <!--            <div class="grid-wrapper grid-col-auto">-->
-
-    <!--                &lt;!&ndash; /.radio-card &ndash;&gt;-->
-    <!--                <label for="radio-card-1" class="radio-card">-->
-    <!--                    <input type="radio" name="radio-card" id="radio-card-1" checked />-->
-    <!--                    <div class="card-content-wrapper">-->
-    <!--                        <span class="check-icon"></span>-->
-    <!--                        <div class="card-content">-->
-    <!--                            <img-->
-    <!--                                    src="https://image.freepik.com/free-vector/group-friends-giving-high-five_23-2148363170.jpg"-->
-    <!--                                    alt=""-->
-    <!--                            />-->
-    <!--                            <h4>Cash</h4>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                </label>-->
-
-    <!--                &lt;!&ndash; /.radio-card &ndash;&gt;-->
-    <!--                <label for="radio-card-2" class="radio-card">-->
-    <!--                    <input type="radio" name="radio-card" id="radio-card-2" />-->
-    <!--                    <div class="card-content-wrapper">-->
-    <!--                        <span class="check-icon"></span>-->
-    <!--                        <div class="card-content">-->
-    <!--                            <img-->
-    <!--                                    src="https://image.freepik.com/free-vector/people-putting-puzzle-pieces-together_52683-28610.jpg"-->
-    <!--                                    alt=""-->
-    <!--                            />-->
-    <!--                            <h4>Paper Check</h4>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                </label>-->
-
-    <!--                &lt;!&ndash; /.radio-card &ndash;&gt;-->
-    <!--                <label for="radio-card-3" class="radio-card">-->
-    <!--                    <input type="radio" name="radio-card" id="radio-card-3" />-->
-    <!--                    <div class="card-content-wrapper">-->
-    <!--                        <span class="check-icon"></span>-->
-    <!--                        <div class="card-content">-->
-    <!--                            <img-->
-    <!--                                    src="https://image.freepik.com/free-vector/people-putting-puzzle-pieces-together_52683-28610.jpg"-->
-    <!--                                    alt=""-->
-    <!--                            />-->
-    <!--                            <h4>Online form of payment</h4>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                </label>-->
-
-    <!--            </div>&lt;!&ndash; /.grid-wrapper &ndash;&gt;-->
-    <!--        </div>-->
 
 </div>
 
