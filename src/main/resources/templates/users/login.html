@@ -8,88 +8,123 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<!--    <link rel="stylesheet" th:href="@{/css/style.css}">-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
 <style>
-    body {
-        /*color: #ededed;*/
-        /*background: #081b29;*/
-        background-image: linear-gradient(to right top, #0d2c5a, #03284e, #012442, #042035, #081b29);
-    }
-    label {
-        font-family: "Raleway", sans-serif;
-        font-size: 11pt;
-    }
-    #forgot-pass {
-        color: black;
-        font-family: "Raleway", sans-serif;
-        font-size: 10pt;
-        margin-top: 3px;
-        text-align: right;
-    }
     #card {
-        background: white;
-        border-radius: 8px;
-        box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-        height: 448px;
-        margin: 6rem auto 8.1rem auto;
-        width: 329px;
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #f6f6f6;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
     }
-    #card-content {
-        padding: 12px 44px;
-    }
+
     #card-title {
-        font-family: "Raleway Thin", sans-serif;
-        letter-spacing: 4px;
-        padding-bottom: 23px;
-        padding-top: 13px;
-        text-align: center;
-    }
-    #signup {
         color: black;
-        font-family: "Raleway", sans-serif;
-        font-size: 10pt;
-        margin-top: 16px;
+        padding: 20px;
         text-align: center;
     }
-    #submit-btn {
-        background: -webkit-linear-gradient(right, #03e9f4, #22D8F3);
-        border: none;
-        border-radius: 25px;
-        box-shadow: 0px 1px 8px #1BC2D8;
-        cursor: pointer;
-        color: white;
-        font-family: "Raleway SemiBold", sans-serif;
-        margin: 0 auto;
-        margin-top: 50px;
-        transition: 0.25s;
-        height: 45%;
-        width: 55%;
+
+    #card-title h2 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
     }
-    #submit-btn:hover {
-        box-shadow: 0px 1px 18px #1BC2D8;
-    }
+
     .form {
-        /*align-items: left;*/
-        display: flex;
-        flex-direction: column;
+        padding: 20px;
     }
-    .form-border {
-        background: -webkit-linear-gradient(right, #03e9f4, #22D8F3);
-        height: 1px;
-        width: 100%;
+
+    .form label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #555;
     }
+
     .form-content {
-        background: #fbfbfb;
+        display: block;
+        width: 100%;
+        padding: 10px;
         border: none;
-        outline: none;
-        padding-top: 14px;
+        border-radius: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        font-weight: 500;
+        color: #555;
     }
+
+    .form-content:focus {
+        outline: none;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #forgot-pass {
+        font-size: 14px;
+        font-weight: 500;
+        color: #555;
+        text-align: right;
+        display: block;
+        margin-top: 10px;
+    }
+
+    #submit-btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    #submit-btn:hover {
+        background-color: #0062cc;
+    }
+
+    #signup {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #555;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    #signup:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        #card {
+            width: 90%;
+        }
+
+        .form-content {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        #forgot-pass, #signup {
+            font-size: 14px;
+        }
+    }
+
 </style>
 
 <body>
-<div th:replace="partials :: landingNavbar"></div>
+<div th:replace="partials :: navbar"></div>
 
     <div id="card">
         <div id="card-content">
@@ -107,9 +142,9 @@
                 </label>
                 <input id="user-password" class="form-content" type="password" name="password" required />
                 <div class="form-border"></div>
-                <a href="#">
-                    <legend id="forgot-pass">Forgot password?</legend>
-                </a>
+<!--                <a href="#">-->
+<!--                    <legend id="forgot-pass">Forgot password?</legend>-->
+<!--                </a>-->
                 <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
                 <a href="/register" id="signup">Don't have account yet?</a>
             </form>
