@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Your custom css styles go here -->
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+<div th:replace="partials :: navbar"></div>
+
+<div id="card">
+  <div id="card-content">
+    <div id="card-title">
+      <h2>Rent Information</h2>
+    </div>
+    <form method="post" class="form">
+      <label style="padding-top:13px">Form of payment</label>
+      <select class="form-select form-content" aria-label="Default select example">
+        <option selected>Select One</option>
+        <option value="1">Cash</option>
+        <option value="2">Paper Check</option>
+        <option value="3">Online</option>
+      </select>
+
+      <label style="padding-top:13px">Monthly Rent</label>
+      <input class="text form-content" id="amount">
+
+      <div class="row">
+        <div class="col 6">
+          <label style="padding-top:13px">Move in date</label>
+          <input type="date" class="form-content" name="MoveIn">
+        </div>
+        <div class="col 6">
+          <label style="padding-top:13px">Move out date</label>
+          <input type="date" class="form-content" name="MoveOut">
+        </div>
+      </div>
+
+      <div class="form-border"></div>
+      <input id="submit-btn" type="submit" name="submit" value="Next" />
+    </form>
+  </div>
+</div>
+
+
+<div th:replace="~{partials :: scripts}"></div>
+</body>
+</html>

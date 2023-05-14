@@ -10,18 +10,13 @@ body {
     /*background: #081b29;*/
     /*background-image: linear-gradient(to right top, #0d2c5a, #03284e, #012442, #042035, #081b29);*/
     background: linear-gradient(to right top, #081b29, #03284e);
-    height: 100vh;
+    height: 100vmin;
 }
 
 html {
     margin:0;
     padding:0;
-    /*font-family: "Raleway", sans-serif;*/
     color: #ededed;
-    /*background: #081b29;*/
-    /*font-family: sans-serif;*/
-    /*background: linear-gradient(#141e30, #243b55);*/
-    /*color: black;*/
 }
 
 ul{
@@ -349,6 +344,7 @@ label {
     font-size: 14px;
     font-weight: 500;
     color: #555;
+    margin-left: 1em
 }
 
 .form-content {

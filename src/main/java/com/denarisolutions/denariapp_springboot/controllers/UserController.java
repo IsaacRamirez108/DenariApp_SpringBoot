@@ -29,4 +29,13 @@ public class UserController {
         return "users/basic_info";
     }
 
+    @GetMapping("/address_form")
+    public String addressForm() {
+        return "users/address_form";
+    }
+
+    @GetMapping("/rent_info")
+    public String rentForm() {
+        return "users/rent_info";
+    }
 }
