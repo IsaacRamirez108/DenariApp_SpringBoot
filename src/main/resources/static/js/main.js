@@ -251,4 +251,20 @@
     });
 
 
+    // Get the input element
+    const amountInput = document.getElementById('amount');
+    // Define the currency symbol
+    const currencySymbol = '$ ';
+    // Listen for changes to the input value
+    amountInput.addEventListener('input', () => {
+        // Get the current value of the input
+        let value = amountInput.value;
+        // Remove any non-digit characters
+        value = value.replace(/[^\d]/g, '');
+        // Add the currency symbol to the value
+        value = currencySymbol + value;
+        // Set the new value of the input
+        amountInput.value = value;
+    });
+
 })();
