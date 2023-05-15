@@ -1,6 +1,9 @@
 package com.denarisolutions.denariapp_springboot.models;
 
 import jakarta.persistence.*;
+
+import java.util.List;
+
 @Entity
 @Table(name="users")
 public class User {
@@ -17,6 +20,8 @@ public class User {
     @Column
     private String password;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "users")
+    private List<RentalData> RentalData;
 
     public User(long id, String firstName, String lastName, String email, String password) {
         this.id = id;
