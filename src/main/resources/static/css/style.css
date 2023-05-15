@@ -4,19 +4,21 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-body {
-    color: #ededed;
-    /*background: #081b29;*/
-    /*background-image: linear-gradient(to right top, #0d2c5a, #03284e, #012442, #042035, #081b29);*/
+html, body {
     background: linear-gradient(to right top, #081b29, #03284e);
-    height: 100vmin;
-}
-
-html {
+    /*    !*background-image: linear-gradient(to right top, #0d2c5a, #03284e, #012442, #042035, #081b29);*!*/
     margin:0;
     padding:0;
     color: #ededed;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 ul{
