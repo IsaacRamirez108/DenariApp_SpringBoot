@@ -3,7 +3,7 @@ package com.denarisolutions.denariapp_springboot.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="property_management")
+@Table(name="property_manager")
 public class PropertyManagement {
 
     @Id

@@ -2,8 +2,8 @@ package com.denarisolutions.denariapp_springboot.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="users_personal_info")
-public class User_Personal_Info {
+@Table(name="personal_info")
+public class PersonalInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,14 +15,14 @@ public class User_Personal_Info {
     @Column
     private String phoneNumber;
 
-    public User_Personal_Info(long id, String SSN, String DOB, String phoneNumber) {
+    public PersonalInfo(long id, String SSN, String DOB, String phoneNumber) {
         this.id = id;
         this.SSN = SSN;
         this.DOB = DOB;
         this.phoneNumber = phoneNumber;
     }
 
-    public User_Personal_Info() {
+    public PersonalInfo() {
     }
 
     public String getSSN() {

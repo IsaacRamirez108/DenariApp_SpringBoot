@@ -20,8 +20,8 @@ public class User {
     @Column
     private String password;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "users")
-    private List<RentalData> RentalData;
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "users")
+//    private List<RentalData> RentalData;
 
     public User(long id, String firstName, String lastName, String email, String password) {
         this.id = id;
