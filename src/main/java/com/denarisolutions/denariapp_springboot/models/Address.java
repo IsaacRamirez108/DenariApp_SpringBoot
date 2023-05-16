@@ -20,6 +20,18 @@ public class Address {
     @Column
     private String postal_code;
 
+    @ManyToOne
+    @JoinColumn(name = "address_id")
+    private  Address address;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "users_address",
+            joinColumns = {@JoinColumn(name = "users_id")},
+            inverseJoinColumns = {@JoinColumn(name = "address_id")}
+    )
+    private List<User> users;
+
     public Address(){
     }
 

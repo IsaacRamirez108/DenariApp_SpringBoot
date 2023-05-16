@@ -2,6 +2,8 @@ package com.denarisolutions.denariapp_springboot.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name="property_manager")
 public class PropertyManagement {
@@ -17,6 +19,13 @@ public class PropertyManagement {
     private String contact;
     @Column
     private String email;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private  User user;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "property_manager")
+    private List<Address> Address;
 
     public PropertyManagement() {
 

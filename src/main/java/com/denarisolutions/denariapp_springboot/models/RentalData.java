@@ -13,16 +13,20 @@ public class RentalData {
     // Still need to figure out how to go about uploading lease document
     //@Column
     //private String imgUrl;
-    @Column
+    @Column (nullable = false)
     private String monthly_rent;
-    @Column
+    @Column (nullable = false)
     private String moveIn_date;
-    @Column
+    @Column (nullable = false)
     private String moveOut_date;
-    @Column
+    @Column (nullable = false)
     private String rental_portal;
-    @Column
+    @Column (nullable = false)
     private String form_payment;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private  User user;
 
     public RentalData() {
 

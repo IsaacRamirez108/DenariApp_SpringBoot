@@ -7,7 +7,6 @@ import java.util.List;
 @Entity
 @Table(name="users")
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -20,8 +19,25 @@ public class User {
     @Column
     private String password;
 
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "users")
-//    private List<RentalData> RentalData;
+    @OneToOne
+    private User personal_info;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<RentalData> RentalData;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<PropertyManagement> PropertyManagement;
+
+    @ManyToMany(mappedBy = "users")
+    private List<Address> Address;
+
+    public User(User copy) {
+        id = copy.id; // This line is SUPER important! Many things won't work if it's absent
+        firstName = copy.firstName;
+        lastName = copy.lastName;
+        email = copy.email;
+        password = copy.password;
+    }
 
     public User(long id, String firstName, String lastName, String email, String password) {
         this.id = id;
