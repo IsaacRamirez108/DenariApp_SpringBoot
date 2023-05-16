@@ -1,6 +1,7 @@
 package com.denarisolutions.denariapp_springboot.models;
 
 import jakarta.persistence.*;
+import jdk.jfr.DataAmount;
 
 import java.util.List;
 
@@ -20,10 +21,13 @@ public class User {
     private String password;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private List<RentalData> RentalData;
+    private List<RentalData> RentalDatalist;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private List<PropertyManagement> PropertyManagement;
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+//    private List<PropertyManagement> PropertyManagements;
+
+    @ManyToMany(mappedBy = "users")
+    private List<PropertyManagement> PropertyManagements;
 
     @ManyToMany(mappedBy = "users")
     private List<Address> Address;

@@ -21,8 +21,7 @@ public class Address {
     private String postal_code;
 
     @ManyToOne
-    @JoinColumn(name = "address_id")
-    private  Address address;
+    private PropertyManagement propertymanagement;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(

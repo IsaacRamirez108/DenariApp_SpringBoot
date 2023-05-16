@@ -20,12 +20,19 @@ public class PropertyManagement {
     @Column
     private String email;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private  User user;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "propertymanagement")
+    private List<Address> Addresses;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "property_manager")
-    private List<Address> Address;
+    //@ManyToOne
+    //private  User user;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "users_property-manager",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "property-manager_id")}
+    )
+    private List<User> users;
 
     public PropertyManagement() {
 
