@@ -27,6 +27,9 @@ public class RentalData {
     @ManyToOne
     private  User user;
 
+    @ManyToOne
+    private PropertyManagement propertymanagement;
+
     public RentalData() {
 
     }

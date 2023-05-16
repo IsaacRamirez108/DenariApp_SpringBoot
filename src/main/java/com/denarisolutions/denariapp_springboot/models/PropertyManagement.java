@@ -23,8 +23,8 @@ public class PropertyManagement {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "propertymanagement")
     private List<Address> Addresses;
 
-    //@ManyToOne
-    //private  User user;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "propertymanagement")
+    private List<RentalData> RentalDatalist;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
