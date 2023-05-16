@@ -15,6 +15,9 @@ public class PersonalInfo {
     @Column
     private String phoneNumber;
 
+    @OneToOne
+    private User owner;
+
     public PersonalInfo(long id, String SSN, String DOB, String phoneNumber) {
         this.id = id;
         this.SSN = SSN;

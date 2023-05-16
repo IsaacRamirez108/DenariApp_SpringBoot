@@ -26,8 +26,8 @@ public class Address {
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
-            name = "users_address",
-            joinColumns = {@JoinColumn(name = "users_id")},
+            name = "users_addresses",
+            joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "address_id")}
     )
     private List<User> users;

@@ -19,9 +19,6 @@ public class User {
     @Column
     private String password;
 
-    @OneToOne
-    private User personal_info;
-
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<RentalData> RentalData;
 
