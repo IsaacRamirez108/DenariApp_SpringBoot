@@ -14,6 +14,8 @@ public class User {
     @Column
     private String firstName;
     @Column
+    private String middleName;
+    @Column
     private String lastName;
     @Column
     private String email;
@@ -35,6 +37,7 @@ public class User {
     public User(User copy) {
         id = copy.id; // This line is SUPER important! Many things won't work if it's absent
         firstName = copy.firstName;
+        middleName = copy.middleName;
         lastName = copy.lastName;
         email = copy.email;
         password = copy.password;
@@ -43,6 +46,7 @@ public class User {
     public User(long id, String firstName, String lastName, String email, String password) {
         this.id = id;
         this.firstName = firstName;
+        this.middleName = middleName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
@@ -66,6 +70,14 @@ public class User {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.firstName = middleName;
     }
 
     public String getLastName() {

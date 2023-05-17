@@ -5,10 +5,11 @@
     <title>Profile</title>
 </head>
 <body>
+<div th:replace="partials :: navbar"></div>
 
-<div class="main-container container">
-
-</div>
+    <form th:action="@{/logout}" th:method="post">
+        <button class="btn-link btn" style="margin-top: 8px">Logout</button>
+    </form>
 
 </body>
 </html>
