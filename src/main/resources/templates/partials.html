@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
@@ -23,8 +24,15 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item" ><a  href="/Pricing">Pricing</a></li>
             <li class="nav-item" ><a href="/AboutUs">About Us</a></li>
-            <li class="nav-item" ><a  href="/login">Login</a></li>
-            <li class="nav-item" ><a  href="/register">Sign Up</a></li>
+<!--            <li class="nav-item" ><a  href="/login">Login</a></li>-->
+<!--            <li class="nav-item" ><a  href="/register">Sign Up</a></li>-->
+            <li class="nav-item" ><a sec:authorize="!isAuthenticated()" class="nav-brand" href="/register">Register</a></li>
+            <li class="nav-item" ><a sec:authorize="!isAuthenticated()" class="nav-brand" href="/login">Login</a></li>
+            <form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="post">
+              <button class="logout-button nav-brand" type="submit" id="logout">Logout</button>
+            </form>
+            <li class="nav-item" ><a sec:authorize="isAuthenticated()" class="nav-brand" th:action="@{/profile}" method="post" href="/profile">Profile</a></li>
+
           </ul>
         </div>
       </div>

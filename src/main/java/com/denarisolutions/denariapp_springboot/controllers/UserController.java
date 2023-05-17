@@ -28,8 +28,8 @@ public class UserController {
 
     @PostMapping("/register")
     public String saveUser(@ModelAttribute User user){
-//        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//        user = userDao.findById(user.getId());
+        user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        user = userDao.findById(user.getId());
         String hash = passwordEncoder.encode(user.getPassword());
         user.setPassword(hash);
         userDao.save(user);
