@@ -10,10 +10,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.security.Principal;
+import java.util.List;
+
 @Controller
 public class UserController {
-    private UserRepository userDao;
-    private PasswordEncoder passwordEncoder;
+    private final UserRepository userDao;
+    private final PasswordEncoder passwordEncoder;
 
     public UserController(UserRepository userDao, PasswordEncoder passwordEncoder) {
         this.userDao = userDao;
@@ -28,13 +31,30 @@ public class UserController {
 
     @PostMapping("/register")
     public String saveUser(@ModelAttribute User user){
-        user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         user = userDao.findById(user.getId());
         String hash = passwordEncoder.encode(user.getPassword());
         user.setPassword(hash);
         userDao.save(user);
         return "redirect:/login";
     }
+
+//    @GetMapping("/profile")
+//    public String showProfile(Model model) {
+//        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        user = userDao.findById(user.getId());
+////        List<BookClub> bookClubs = user.getBookClubs();
+////        model.addAttribute("bookClubs", bookClubs);
+//        model.addAttribute("user", user);
+//        return "users/profile";
+//    }
+//
+//    @PostMapping("/profile")
+//    public String editProfile(@ModelAttribute("user") User user, Principal principal) {
+//        String hash = passwordEncoder.encode(user.getPassword());
+//        user.setPassword(hash);
+//        userDao.save(user);
+//        return "redirect:/profile";
+//    }
 
 //    @GetMapping("/login")
 //    public String loginForm() {

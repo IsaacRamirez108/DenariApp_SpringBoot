@@ -15,7 +15,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfiguration {
 
-    private UserDetailsLoader usersLoader;
+    private final UserDetailsLoader usersLoader;
 
     public SecurityConfiguration(UserDetailsLoader usersLoader) {
         this.usersLoader = usersLoader;
@@ -37,26 +37,24 @@ public class SecurityConfiguration {
                 /* Login configuration */
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/profile") // user's home page, it can be any URL
+                .defaultSuccessUrl("/profile",true) // user's home page, it can be any URL
                 .permitAll() // Anyone can go to the login page
                 /* Logout configuration */
                 .and()
                 .logout()
-                .logoutSuccessUrl("/") // append a query string value
+                .logoutSuccessUrl("/Landing") // append a query string value
                 /* Pages that can be viewed without having to log in */
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/Landing", "/pricing", "/AboutUs", "/register") // anyone can see home, the ads pages, and sign up
+                .requestMatchers("/register", "/Landing", "/Pricing", "/AboutUs", "/css/**", "/js/**","/img/**") // anyone can see home, these pages, and sign up
                 .permitAll()
                 /* Pages that require authentication */
                 .and()
                 .authorizeHttpRequests()
                 .requestMatchers(
-                        "/ads/create", // only authenticated users can create ads
-                        "/ads/{id}/edit" // only authenticated users can edit ads
+                        "/profile" // only authenticated users can view profile
                 )
-                .authenticated()
-        ;
+                .authenticated();
         return http.build();
     }
 
