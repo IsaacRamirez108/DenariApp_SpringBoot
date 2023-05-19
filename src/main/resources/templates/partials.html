@@ -28,10 +28,10 @@
 <!--            <li class="nav-item" ><a  href="/register">Sign Up</a></li>-->
             <li class="nav-item" ><a sec:authorize="!isAuthenticated()" class="nav-brand" href="/register">Register</a></li>
             <li class="nav-item" ><a sec:authorize="!isAuthenticated()" class="nav-brand" href="/login">Login</a></li>
-            <form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="post">
+            <form sec:authorize="isAuthenticated()" th:action="@{/logout}" th:method="POST">
               <button class="logout-button nav-brand" type="submit" id="logout">Logout</button>
             </form>
-            <li class="nav-item" ><a sec:authorize="isAuthenticated()" class="nav-brand" th:action="@{/profile}" method="post" href="/profile">Profile</a></li>
+            <li class="nav-item" ><a sec:authorize="isAuthenticated()" class="nav-brand" th:action="@{/profile}" th:method="POST" href="/profile">Profile</a></li>
 
           </ul>
         </div>

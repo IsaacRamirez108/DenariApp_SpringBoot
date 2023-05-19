@@ -20,7 +20,7 @@ public class User {
     @Column
     private String email;
     @Column
-    private String userName;
+    private String username;
     @Column
     private String password;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
@@ -37,16 +37,16 @@ public class User {
         firstName = copy.firstName;
         middleName = copy.middleName;
         lastName = copy.lastName;
-        userName = copy.userName;
+        username = copy.username;
         email = copy.email;
         password = copy.password;
     }
-    public User(long id, String firstName, String lastName, String email, String password) {
+    public User(long id, String firstName, String lastName, String email, String password, String username) {
         this.id = id;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
-        this.userName = userName;
+        this.username = username;
         this.email = email;
         this.password = password;
     }
@@ -68,7 +68,7 @@ public class User {
         return middleName;
     }
     public void setMiddleName(String middleName) {
-        this.firstName = middleName;
+        this.middleName = middleName;
     }
     public String getLastName() {
         return lastName;
@@ -83,10 +83,10 @@ public class User {
         this.email = email;
     }
     public String getUsername() {
-        return userName;
+        return username;
     }
     public void setUsername(String username) {
-        this.userName = userName;
+        this.username = username;
     }
     public String getPassword() {
         return password;

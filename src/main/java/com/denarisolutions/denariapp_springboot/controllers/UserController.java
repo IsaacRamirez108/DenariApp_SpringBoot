@@ -24,37 +24,21 @@ public class UserController {
     }
 
     @GetMapping("/register")
-    public String showSignupForm(Model model){
+    public String registrationForm(Model model){
         model.addAttribute("user", new User());
         return "users/register";
     }
 
     @PostMapping("/register")
     public String saveUser(@ModelAttribute User user){
-        user = userDao.findById(user.getId());
+//        user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        user = userDao.findById(user.getId());
         String hash = passwordEncoder.encode(user.getPassword());
         user.setPassword(hash);
         userDao.save(user);
         return "redirect:/login";
     }
 
-//    @GetMapping("/profile")
-//    public String showProfile(Model model) {
-//        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//        user = userDao.findById(user.getId());
-////        List<BookClub> bookClubs = user.getBookClubs();
-////        model.addAttribute("bookClubs", bookClubs);
-//        model.addAttribute("user", user);
-//        return "users/profile";
-//    }
-//
-//    @PostMapping("/profile")
-//    public String editProfile(@ModelAttribute("user") User user, Principal principal) {
-//        String hash = passwordEncoder.encode(user.getPassword());
-//        user.setPassword(hash);
-//        userDao.save(user);
-//        return "redirect:/profile";
-//    }
 
 //    @GetMapping("/login")
 //    public String loginForm() {
