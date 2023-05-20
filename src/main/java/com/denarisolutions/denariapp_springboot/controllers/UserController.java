@@ -39,6 +39,13 @@ public class UserController {
         return "redirect:/login";
     }
 
+    @GetMapping("/profile")
+    public String showProfile(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        user = userDao.findById(user.getId());
+        model.addAttribute("user", user);
+        return "users/profile";
+    }
 
 //    @GetMapping("/login")
 //    public String loginForm() {

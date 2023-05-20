@@ -14,23 +14,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration {
-
     private final UserDetailsLoader usersLoader;
-
-    public SecurityConfiguration(UserDetailsLoader usersLoader) {
-        this.usersLoader = usersLoader;
-    }
-
+    public SecurityConfiguration(UserDetailsLoader usersLoader) {this.usersLoader = usersLoader;}
     @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
+    public PasswordEncoder passwordEncoder() {return new BCryptPasswordEncoder();}
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
-        return authenticationConfiguration.getAuthenticationManager();
-    }
-
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {return authenticationConfiguration.getAuthenticationManager();}
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
@@ -51,11 +40,10 @@ public class SecurityConfiguration {
                 /* Pages that require authentication */
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers(
-                        "/profile" // only authenticated users can view profile
-                )
+                .requestMatchers("/profile") // only authenticated users can view profile
                 .authenticated();
         return http.build();
     }
 
 }
+
