@@ -1,12 +1,7 @@
 package com.denarisolutions.denariapp_springboot.controllers;
 
-import com.denarisolutions.denariapp_springboot.models.User;
-import com.denarisolutions.denariapp_springboot.repositories.AddressRepository;
-import com.denarisolutions.denariapp_springboot.repositories.PersonalInfoRepository;
-import com.denarisolutions.denariapp_springboot.repositories.RentalDataRepository;
-import com.denarisolutions.denariapp_springboot.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
+import com.denarisolutions.denariapp_springboot.models.*;
+import com.denarisolutions.denariapp_springboot.repositories.*;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -16,34 +11,59 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.security.Principal;
-import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 
 @Controller
 public class UserController {
     private final UserRepository userDao;
     private final PasswordEncoder passwordEncoder;
-    private final PersonalInfoRepository basicInfoDao;
+    private final PersonalInfoRepository personalInfoDao;
     private final AddressRepository addressDao;
     private final RentalDataRepository rentalDataDao;
+    private final PropertyManagementRepository propertyManagementDao;
 
-    public UserController(UserRepository userDao, PasswordEncoder passwordEncoder, PersonalInfoRepository basicInfoDao, AddressRepository addressDao, RentalDataRepository rentalDataDao) {
+    public UserController(UserRepository userDao, PasswordEncoder passwordEncoder, PersonalInfoRepository personalInfoDao,
+                          AddressRepository addressDao, RentalDataRepository rentalDataDao,
+                          PropertyManagementRepository propertyManagementDao) {
         this.userDao = userDao;
         this.passwordEncoder = passwordEncoder;
-        this.basicInfoDao = basicInfoDao;
+        this.personalInfoDao = personalInfoDao;
         this.addressDao = addressDao;
         this.rentalDataDao = rentalDataDao;
+        this.propertyManagementDao = propertyManagementDao;
     }
 
     @GetMapping("/register")
     public String registrationForm(Model model){
         model.addAttribute("user", new User());
+        model.addAttribute("personalInfo", new PersonalInfo());
+        model.addAttribute("address", new Address());
+        model.addAttribute("rentalData", new RentalData());
+        model.addAttribute("propertyManagement", new PropertyManagement());
         return "users/register";
     }
 
     @PostMapping("/register")
-    public String saveUser(@ModelAttribute User user){
+    public String saveUser(@ModelAttribute User user, @ModelAttribute PersonalInfo personalInfo, @ModelAttribute Address address, @ModelAttribute RentalData rentalData,@ModelAttribute PropertyManagement propertyManagement){
+        personalInfo = new PersonalInfo();
+        personalInfo.setUser(user);
+
+        rentalData = new RentalData();
+        rentalData.setUser(user);
+
+        address = new Address();
+        address.setUsers((Set<User>) user);
+
+        propertyManagement = new PropertyManagement();
+        propertyManagement.setUsers((Set<User>) user);
+
+        // Save the entities
+        personalInfoDao.save(personalInfo);
+        rentalDataDao.save(rentalData);
+        addressDao.save(address);
+        propertyManagementDao.save(propertyManagement);
         String hash = passwordEncoder.encode(user.getPassword());
         user.setPassword(hash);
         userDao.save(user);

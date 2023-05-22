@@ -16,7 +16,12 @@ public class PersonalInfo {
     private String phoneNumber;
 
     @OneToOne
+    @JoinColumn(name = "user_id")
     private User user;
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public PersonalInfo(long id, String SSN, String DOB, String phoneNumber) {
         this.id = id;

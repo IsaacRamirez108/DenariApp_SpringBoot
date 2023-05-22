@@ -3,6 +3,7 @@ package com.denarisolutions.denariapp_springboot.models;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="property_manager")
@@ -32,11 +33,13 @@ public class PropertyManagement {
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "property-manager_id")}
     )
-    private List<User> users;
+    private Set<User> users;
 
-    public PropertyManagement() {
-
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
+
+    public PropertyManagement() {}
     public PropertyManagement(long id, String individual_company, String name, String contact, String email){
         this.id = id;
         this.individual_company = individual_company;

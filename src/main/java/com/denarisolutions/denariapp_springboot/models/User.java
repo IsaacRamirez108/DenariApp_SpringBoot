@@ -33,14 +33,13 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<RentalData> RentalDatalist;
 
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-//    private List<PropertyManagement> PropertyManagements;
 
     @ManyToMany(mappedBy = "users")
     private List<PropertyManagement> PropertyManagements;
 
     @ManyToMany(mappedBy = "users")
     private List<Address> Address;
+    
 
     public User(User copy) {
         id = copy.id; // This line is SUPER important! Many things won't work if it's absent
@@ -60,7 +59,9 @@ public class User {
         this.email = email;
         this.password = password;
     }
-    public User() {}
+    public User() {
+
+    }
     public long getId() {
         return id;
     }
@@ -104,4 +105,6 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 }

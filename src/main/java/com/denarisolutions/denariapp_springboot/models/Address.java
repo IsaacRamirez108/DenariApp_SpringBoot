@@ -1,7 +1,9 @@
 package com.denarisolutions.denariapp_springboot.models;
 
 import jakarta.persistence.*;
+
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="addresses")
@@ -30,7 +32,7 @@ public class Address {
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "address_id")}
     )
-    private List<User> users;
+    private Set<User> users;
 
     public Address(){
     }
@@ -97,5 +99,13 @@ public class Address {
 
     public void setPostal_code(String postal_code) {
         this.postal_code = postal_code;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
+
+    public Set<User> getUsers() {
+        return users;
     }
 }

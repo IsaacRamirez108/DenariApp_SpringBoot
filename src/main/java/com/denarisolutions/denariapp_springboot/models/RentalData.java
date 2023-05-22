@@ -28,13 +28,14 @@ public class RentalData {
     @JoinColumn(name = "user_id")
     private  User user;
 
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @ManyToOne
     @JoinColumn(name = "propertymanagement_id")
     private PropertyManagement propertymanagement;
 
-    public RentalData() {
-
-    }
     public RentalData(long id, String monthly_rent, String moveIn_date, String moveOut_date, String rental_portal, String form_payment) {
         this.id = id;
         this.monthly_rent = monthly_rent;
@@ -49,6 +50,10 @@ public class RentalData {
         this.moveOut_date = moveOut_date;
         this.rental_portal = rental_portal;
         this.form_payment = form_payment;
+    }
+
+    public RentalData() {
+
     }
 
     public long getId() {
