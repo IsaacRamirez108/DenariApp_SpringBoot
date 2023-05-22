@@ -25,9 +25,11 @@ public class RentalData {
     private String form_payment;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private  User user;
 
     @ManyToOne
+    @JoinColumn(name = "propertymanagement_id")
     private PropertyManagement propertymanagement;
 
     public RentalData() {

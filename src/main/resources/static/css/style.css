@@ -1,12 +1,11 @@
 * {
-    /*margin: 0;*/
-    /*padding: 0;*/
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 html, body {
-    background: linear-gradient(to right top, #081b29, #03284e);
-    /*    !*background-image: linear-gradient(to right top, #0d2c5a, #03284e, #012442, #042035, #081b29);*!*/
+    /*background: linear-gradient(to right top, #081b29, #03284e);*/
+    background-image: linear-gradient(to right top, #0d2c5a, #03284e, #012442, #042035, #081b29);
+    /*background: linear-gradient(to right top,  #0d2c5a, #03284e);*/
     margin:0;
     padding:0;
     color: #ededed;
@@ -15,7 +14,7 @@ html {
     height: 100%;
 }
 body {
-    height: 100%;
+    /*height: 100%;*/
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -23,20 +22,6 @@ body {
 
 ul{
     list-style: none;
-}
-
-.navbar a {
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-    color: #ededed;
-}
-
-.navbar a:hover,
-.navbar a.active {
-    color: #03e9f4;
 }
 
 #Registration-page, #login-page{
@@ -67,18 +52,34 @@ label {
 }
 
 /*Social Security Number Input Format*/
-.num{
-    position:relative;
+/*.num{*/
+/*    position:relative;*/
+/*}*/
+
+/*.ssn-number{*/
+/*    position: absolute;*/
+/*}*/
+
+/*.ssn-value{*/
+/*    position: relative;*/
+/*    color: transparent !important;*/
+/*    background: transparent;*/
+/*}*/
+
+.navbar button {
+    background-color: transparent;
+    border: transparent;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    color: #ededed;
+    padding: 0;
 }
 
-.ssn-number{
-    position: absolute;
-}
-
-.ssn-value{
-    position: relative;
-    color: transparent !important;
-    background: transparent;
+.navbar button:hover{
+    color: #03e9f4;
 }
 
 .navbar a {
@@ -90,11 +91,9 @@ label {
     color: #ededed;
 }
 
-.navbar a:hover,
-.navbar a.active {
+.navbar a:hover{
     color: #03e9f4;
 }
-
 
 .home {
     height: 100vh;
@@ -118,17 +117,18 @@ label {
     line-height: 1.2;
 }
 
-.home-content h1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #03284e;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1s;
-}
+/*.home-content h1::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: linear-gradient(to right top,  #0d2c5a, #03284e);*/
+/*    !*background: #03284e;*!*/
+/*    animation: showRight 1s ease forwards;*/
+/*    animation-delay: 1s;*/
+/*}*/
 
 .home-content h3 {
     position: relative;
@@ -137,17 +137,18 @@ label {
     color: #03e9f4;
 }
 
-.home-content h3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.3s;
-}
+/*.home-content h3::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: linear-gradient(to right top,  #0d2c5a, #03284e);*/
+/*    !*background: #081b29;*!*/
+/*    animation: showRight 1s ease forwards;*/
+/*    animation-delay: 1.3s;*/
+/*}*/
 
 .home-content p {
     position: relative;
@@ -155,17 +156,18 @@ label {
     margin: 20px 0 40px;
 }
 
-.home-content p::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.6s;
-}
+/*.home-content p::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: linear-gradient(to right top,  #0d2c5a, #03284e);*/
+/*    !*background: #081b29;*!*/
+/*    animation: showRight 1s ease forwards;*/
+/*    animation-delay: 1.6s;*/
+/*}*/
 
 .home-content .btn-box {
     position: relative;
@@ -175,18 +177,19 @@ label {
     height: 50px;
 }
 
-.home-content .btn-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: 1.9s;
-    z-index: 2;
-}
+/*.home-content .btn-box::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: linear-gradient(to right top,  #0d2c5a, #03284e);*/
+/*    !*background: #081b29;*!*/
+/*    animation: showRight 1s ease forwards;*/
+/*    animation-delay: 1.9s;*/
+/*    z-index: 2;*/
+/*}*/
 
 .btn-box a {
     position: relative;
@@ -249,18 +252,18 @@ label {
     justify-content: space-between;
 }
 
-.home-sci::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #081b29;
-    animation: showRight 1s ease forwards;
-    animation-delay: 2.5s;
-    z-index: 2;
-}
+/*.home-sci::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: #081b29;*/
+/*    animation: showRight 1s ease forwards;*/
+/*    animation-delay: 2.5s;*/
+/*    z-index: 2;*/
+/*}*/
 
 .home-sci a {
     position: relative;
@@ -376,25 +379,6 @@ label {
     margin-top: 10px;
 }
 
-/*#submit-btn {*/
-/*    display: block;*/
-/*    width: 100%;*/
-/*    padding: 10px;*/
-/*    background-color: #007bff;*/
-/*    color: #fff;*/
-/*    border: none;*/
-/*    border-radius: 5px;*/
-/*    font-size: 16px;*/
-/*    font-weight: 500;*/
-/*    text-transform: uppercase;*/
-/*    cursor: pointer;*/
-/*    transition: background-color 0.2s ease-in-out;*/
-/*}*/
-
-/*#submit-btn:hover {*/
-/*    background-color: #0062cc;*/
-/*}*/
-
 #signup {
     display: block;
     margin-top: 10px;
@@ -447,20 +431,8 @@ label {
 #submit-btn:hover {
     box-shadow: 0px 1px 18px #1BC2D8;
 }
-
-/*.form {*/
-/*    align-items: left;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
-/*.form-border {*/
-/*    background: -webkit-linear-gradient(right, #03e9f4, #22D8F3);*/
-/*    height: 1px;*/
-/*    width: 100%;*/
-/*}*/
-/*.form-content {*/
-/*    background: #fbfbfb;*/
-/*    border: none;*/
-/*    outline: none;*/
-/*    padding-top: 14px;*/
-/*}*/
+.center {
+    display: block;
+    margin-left: auto;
+    width: 50%;
+}

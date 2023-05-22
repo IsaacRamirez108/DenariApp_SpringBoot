@@ -10,28 +10,38 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private long id;
     @Column
     private String firstName;
+
     @Column
     private String middleName;
+
     @Column
     private String lastName;
+
     @Column
     private String email;
+
     @Column
     private String username;
+
     @Column
     private String password;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<RentalData> RentalDatalist;
+
 //    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 //    private List<PropertyManagement> PropertyManagements;
+
     @ManyToMany(mappedBy = "users")
     private List<PropertyManagement> PropertyManagements;
 
     @ManyToMany(mappedBy = "users")
     private List<Address> Address;
+
     public User(User copy) {
         id = copy.id; // This line is SUPER important! Many things won't work if it's absent
         firstName = copy.firstName;

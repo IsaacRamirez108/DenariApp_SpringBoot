@@ -8,8 +8,49 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
+<style>
+    .AU-container {
+        display: flex;
+    }
+
+    .image {
+        flex: 1;
+    }
+
+    .text-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; /* Adjust alignment as needed */
+        padding-left: 20px; /* Add padding to create space between image and text */
+    }
+    .button-container {
+        margin-top: 20px; /* Add margin to separate the button from the text */
+    }
+</style>
+
 <body>
 <div th:replace="partials :: navbar"></div>
+
+<div class="AU-container">
+    <div class="text-container">
+        <section>
+            <h3>We're building this together</h3>
+            <p>Denari is still an early stage startup company and our team is constantly looking
+                for ways to improve our product. If you see any bugs or have ideas for improvement,
+                please let us know using our "Feedback" link on our navbar, and we will fix them
+                as quickly as possible.
+            </p>
+            <div class="button-container">
+                <button>Get Started</button>
+            </div>
+        </section>
+    </div>
+    <div class="image">
+        <img src="../static/img/AboutUs_img.png" th:src="@{/img/AboutUs_img.png}" width="350" height="500" >
+    </div>
+</div>
 
 <!--<div id="card">-->
 <!--    <div id="card-content">-->

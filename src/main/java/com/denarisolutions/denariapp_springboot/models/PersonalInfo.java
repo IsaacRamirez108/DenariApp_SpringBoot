@@ -16,7 +16,7 @@ public class PersonalInfo {
     private String phoneNumber;
 
     @OneToOne
-    private User owner;
+    private User user;
 
     public PersonalInfo(long id, String SSN, String DOB, String phoneNumber) {
         this.id = id;

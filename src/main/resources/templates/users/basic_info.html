@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Basic Information</title>
@@ -18,9 +19,9 @@
         <div id="card-title">
             <h2>Personal Information</h2>
         </div>
-        <form method="post" class="form">
+        <form class="form" th:action="@{/basic_info}" th:method="POST" th:object="${user}">
             <label for="dob" style="padding-top:13px">Data of Birth</label>
-            <input id="dob" class="form-content" type="date" name="dob" autocomplete="on" required />
+            <input id="dob" class="form-content" type="date" name="dob" required />
 
             <label style="padding-top:13px">Social Security Number</label>
             <input class="form-content" type="text" id="ssn"/>
