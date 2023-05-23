@@ -177,14 +177,14 @@
     <div class="card" data-step>
         <h3 class="step-title">This is step 2</h3>
 
-        <label for="dob" style="padding-top:13px">Data of Birth</label>
-        <input id="dob" class="form-content" type="date" name="personal_info.DOB"  />
+        <label for="DOB" style="padding-top:13px">Data of Birth</label>
+        <input id="DOB" class="form-content" type="date" name="personal_info.DOB" th:field="*{personal_info.DOB}" />
 
-        <label style="padding-top:13px">Social Security Number</label>
-        <input class="form-content" type="text" id="ssn" name="personal_info.SSN" />
+        <label for="SSN" style="padding-top:13px">Social Security Number</label>
+        <input id="SSN" class="form-content" type="text" id="ssn" name="personal_info.SSN" th:field="*{personal_info.SSN}"/>
 
-        <label  style="padding-top:22px">&nbsp;Phone Number</label>
-        <input  type="tel" class="form-content" id="phone-number" name="personal_info.phoneNumber" />
+        <label for="phoneNumber" style="padding-top:22px">&nbsp;Phone Number</label>
+        <input id="phoneNumber" type="tel" class="form-content" id="phone-number" name="personal_info.phoneNumber" th:field="*{personal_info.phoneNumber}" />
 
         <button type="button" data-previous>Previous</button>
         <button type="button" data-next>Next</button>
@@ -195,28 +195,28 @@
         <h3 class="step-title">This is step 2</h3>
 
         <label style="padding-top:13px">Landlord type</label>
-        <select class="form-select form-content" aria-label="Default select example" name="property_manager.individual_company">
+        <select class="form-select form-content" aria-label="Default select example" name="property_manager.individual_company" th:field="*{property_manager.individual_company}">
             <option selected>Select One</option>
             <option value="1">Individual (Single Person)</option>
             <option value="2">Company (Legal Entity)</option>
         </select>
 <!--        <mapbox-address-autofill access-token="pk.eyJ1IjoiaXJhbWlyZXoxMDgiLCJhIjoiY2xiMm56NGE5MDNnbDNzcGh5dmoyeXVjNSJ9.K6sMjb-FN0pH8o1piPNklA">-->
             <label style="padding-top:13px">Address</label>
-            <input class="text form-content" name="address.street" autocomplete="address-line1" >
+            <input class="text form-content" name="address.street" autocomplete="address-line1" th:field="*{address.street}">
             <label style="padding-top:13px">City</label>
-            <input class="text form-content" name="address.city" autocomplete="address-level2" >
+            <input class="text form-content" name="address.city" autocomplete="address-level2" th:field="*{address.city}">
             <div class="row">
                 <div class="col 4">
                     <label style="padding-top:13px">Apt, suite, unit, etc.</label>
-                    <input class="text form-content" name="address.appt_number" autocomplete="address-line2">
+                    <input class="text form-content" name="address.appt_number" autocomplete="address-line2" th:field="*{address.appt_number}">
                 </div>
                 <div class="col 4">
                     <label style="padding-top:13px">State</label>
-                    <input class="text form-content" name="address.state" autocomplete="address-level1" >
+                    <input class="text form-content" name="address.state" autocomplete="address-level1" th:field="*{address.state}">
                 </div>
                 <div class="col 4">
                     <label style="padding-top:13px">ZIP / Postcode</label>
-                    <input class="text form-content" name="address.postal_code"  autocomplete="postal-code" >
+                    <input class="text form-content" name="address.postal_code"  autocomplete="postal-code" th:field="*{address.postal_code}">
                 </div>
             </div>
 <!--        </mapbox-address-autofill>-->
@@ -229,23 +229,23 @@
     <div class="card" data-step>
         <h3 class="step-title">This is step 3</h3>
         <label style="padding-top:13px">Form of payment</label>
-        <select class="form-select form-content" name="rental_data.form_payment" aria-label="Default select example">
+        <select class="form-select form-content" name="rental_data.form_payment" aria-label="Default select example" th:field="*{rental_data.form_payment}">
             <option selected>Select One</option>
             <option value="1">Cash</option>
             <option value="2">Paper Check</option>
             <option value="3">Online</option>
         </select>
         <label style="padding-top:13px">Monthly Rent</label>
-        <input class="text form-content" id="amount"  name="rental_data.monthly_rent">
+        <input class="text form-content" id="amount"  name="rental_data.monthly_rent" th:field="*{rental_data.monthly_rent}">
 
         <div class="row">
             <div class="col 6">
                 <label style="padding-top:13px">Move in date</label>
-                <input type="date" class="form-content" name="rental_data.moveIn_date">
+                <input type="date" class="form-content" name="rental_data.moveIn_date" th:field="*{rental_data.moveIn_date}">
             </div>
             <div class="col 6">
                 <label style="padding-top:13px">Move out date</label>
-                <input type="date" class="form-content" name="rental_data.moveOut_date">
+                <input type="date" class="form-content" name="rental_data.moveOut_date" th:field="*{rental_data.moveOut_date}">
             </div>
         </div>
         <button type="button" data-previous>Previous</button>

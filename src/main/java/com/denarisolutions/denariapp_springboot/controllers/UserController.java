@@ -9,10 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 
 @Controller
@@ -24,6 +21,8 @@ public class UserController {
     private final RentalDataRepository rentalDataDao;
     private final PropertyManagementRepository propertyManagementDao;
 
+//    private final ProjectForm projectFormDao;
+
     public UserController(UserRepository userDao, PasswordEncoder passwordEncoder, PersonalInfoRepository personalInfoDao,
                           AddressRepository addressDao, RentalDataRepository rentalDataDao,
                           PropertyManagementRepository propertyManagementDao) {
@@ -33,6 +32,7 @@ public class UserController {
         this.addressDao = addressDao;
         this.rentalDataDao = rentalDataDao;
         this.propertyManagementDao = propertyManagementDao;
+//        this.projectFormDao = projectFormDao;
     }
 
     @GetMapping("/register")
@@ -44,32 +44,20 @@ public class UserController {
         model.addAttribute("propertyManagement", new PropertyManagement());
         return "users/register";
     }
-
     @PostMapping("/register")
     public String saveUser(@ModelAttribute User user, @ModelAttribute PersonalInfo personalInfo, @ModelAttribute Address address, @ModelAttribute RentalData rentalData,@ModelAttribute PropertyManagement propertyManagement){
-        personalInfo = new PersonalInfo();
-        personalInfo.setUser(user);
-
-        rentalData = new RentalData();
-        rentalData.setUser(user);
-
-        address = new Address();
-        address.setUsers((Set<User>) user);
-
-        propertyManagement = new PropertyManagement();
-        propertyManagement.setUsers((Set<User>) user);
 
         // Save the entities
         personalInfoDao.save(personalInfo);
         rentalDataDao.save(rentalData);
         addressDao.save(address);
         propertyManagementDao.save(propertyManagement);
+
         String hash = passwordEncoder.encode(user.getPassword());
         user.setPassword(hash);
         userDao.save(user);
         return "redirect:/login";
     }
-
     @GetMapping("/profile")
     public String showProfile(Model model) {
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
